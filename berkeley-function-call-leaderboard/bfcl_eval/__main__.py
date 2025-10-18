@@ -19,6 +19,11 @@ from bfcl_eval.eval_checker.eval_runner import main as evaluation_main
 from dotenv import load_dotenv
 from tabulate import tabulate
 
+from bfcl_eval.augmentation.split import SplitConfig, run_split
+from bfcl_eval.augmentation.train import TrainConfig, run_train
+from bfcl_eval.augmentation.test import TestConfig, run_test
+from bfcl_eval.augmentation.report import run_report, run_compare
+
 
 class ExecutionOrderGroup(typer.core.TyperGroup):
     def list_commands(self, ctx):
@@ -29,6 +34,7 @@ class ExecutionOrderGroup(typer.core.TyperGroup):
             "results",
             "evaluate",
             "scores",
+            "augment",
             "version",
         ]
 
@@ -57,12 +63,96 @@ def handle_multiple_input(input_str):
 
     return [item.strip() for item in ",".join(input_str).split(",") if item.strip()]
 
+
+augment_app = typer.Typer(help="Agentic ICL augmentation workflows")
+cli.add_typer(augment_app, name="augment")
+
+
+@augment_app.command("split")
+def augment_split(
+    tag: str = typer.Option(..., help="Run tag name"),
+    seed: int = typer.Option(42, help="Random seed for deterministic split"),
+    ratio: str = typer.Option("2:1", help="Train:Test ratio, e.g., 2:1"),
+    test_category: List[str] = typer.Option(
+        ["agentic"], callback=handle_multiple_input
+    ),
+):
+    """Create a deterministic split over agentic subcategories and write split.json."""
+    cfg = SplitConfig(tag=tag, seed=seed, ratio=ratio, test_categories=test_category)
+    path = run_split(cfg)
+    print(f"✅ Wrote split file: {path}")
+
+
+@augment_app.command("train")
+def augment_train(
+    tag: str = typer.Option(..., help="Run tag name"),
+    model_train: str = typer.Option(..., help="OpenAI FC model for training pool"),
+    embedding_model: str = typer.Option(
+        "sentence-transformers/all-MiniLM-L6-v2", help="Embedding model name"
+    ),
+):
+    """Run generation on train split, evaluate, create success pool and FAISS index."""
+    load_dotenv(dotenv_path=DOTENV_PATH, verbose=True, override=True)
+    cfg = TrainConfig(tag=tag, model_train=model_train, embedding_model=embedding_model)
+    run_train(cfg)
+    print("✅ Training run complete (results, scores, success pool, index)")
+
+
+@augment_app.command("test")
+def augment_test(
+    tag: str = typer.Option(..., help="Run tag name"),
+    model_eval: str = typer.Option(..., help="OpenAI FC eval model X"),
+    source_model: str = typer.Option(..., help="Model Y that produced the pool"),
+    retrieval_scope: str = typer.Option("subcategory", help="subcategory|agentic"),
+    k: int = typer.Option(5, help="Top-k examples to retrieve"),
+    embedding_model: str = typer.Option(
+        "sentence-transformers/all-MiniLM-L6-v2", help="Embedding model name"
+    ),
+):
+    """Run augmented generation on the test split and evaluate."""
+    load_dotenv(dotenv_path=DOTENV_PATH, verbose=True, override=True)
+    cfg = TestConfig(
+        tag=tag,
+        model_eval=model_eval,
+        source_model=source_model,
+        retrieval_scope=retrieval_scope,
+        k=k,
+        embedding_model=embedding_model,
+    )
+    run_test(cfg)
+    print("✅ Augmented test run complete (results, scores)")
+
+
+@augment_app.command("report")
+def augment_report(
+    tag: str = typer.Option(..., help="Run tag name"),
+):
+    """Generate train/test CSV summaries under augment/runs/TAG/report."""
+    out = run_report(tag)
+    print(f"📈 Wrote reports under: {out}")
+
+
+@augment_app.command("compare")
+def augment_compare(
+    tag: str = typer.Option(..., help="Run tag name"),
+    model_eval: str = typer.Option(..., help="Eval model X"),
+    source_model: str = typer.Option(..., help="Pool model Y"),
+    retrieval_scope: str = typer.Option("subcategory", help="subcategory|agentic"),
+):
+    """Print where augmented reports live; compare manually vs baseline scores output."""
+    res = run_compare(tag, model_eval, source_model, retrieval_scope)
+    print(json.dumps(res, indent=2))
+
+
 @cli.command()
 def version():
     """
     Show the bfcl version. PyPI versions are in development, please rely on the commit hash for reproducibility.
     """
-    print(f"bfcl version: {_version('bfcl')} \nNote: pypi versions are in development, please rely on the commit hash for reproducibility.")
+    print(
+        f"bfcl version: {_version('bfcl')} \nNote: pypi versions are in development, please rely on the commit hash for reproducibility."
+    )
+
 
 @cli.command()
 def test_categories():
@@ -96,14 +186,14 @@ def models():
 @cli.command()
 def generate(
     model: List[str] = typer.Option(
-        ["gorilla-openfunctions-v2"], 
+        ["gorilla-openfunctions-v2"],
         help="A list of model names to generate the llm response. Use commas to separate multiple models.",
-        callback=handle_multiple_input
+        callback=handle_multiple_input,
     ),
     test_category: List[str] = typer.Option(
-        ["all"], 
+        ["all"],
         help="A list of test categories to run the evaluation on. Use commas to separate multiple test categories.",
-        callback=handle_multiple_input
+        callback=handle_multiple_input,
     ),
     temperature: float = typer.Option(
         0.001, help="The temperature parameter for the model."
@@ -119,8 +209,12 @@ def generate(
         help="Exclude info about the state of each API system after each turn in the inference log; only relevant for multi-turn categories.",
     ),
     num_gpus: int = typer.Option(1, help="The number of GPUs to use."),
-    num_threads: Optional[int] = typer.Option(None, help="The number of threads to use."),
-    gpu_memory_utilization: float = typer.Option(0.9, help="The GPU memory utilization."),
+    num_threads: Optional[int] = typer.Option(
+        None, help="The number of threads to use."
+    ),
+    gpu_memory_utilization: float = typer.Option(
+        0.9, help="The GPU memory utilization."
+    ),
     backend: str = typer.Option("sglang", help="The backend to use for the model."),
     skip_server_setup: bool = typer.Option(
         False,
@@ -169,7 +263,9 @@ def generate(
         allow_overwrite=allow_overwrite,
         run_ids=run_ids,
     )
-    load_dotenv(dotenv_path=DOTENV_PATH, verbose=True, override=True)  # Load the .env file
+    load_dotenv(
+        dotenv_path=DOTENV_PATH, verbose=True, override=True
+    )  # Load the .env file
     generation_main(args)
 
 
@@ -216,7 +312,9 @@ def results(
         results_data.append(
             (
                 display_name(dir.name),
-                datetime.fromtimestamp(dir.stat().st_ctime).strftime("%Y-%m-%d %H:%M:%S"),
+                datetime.fromtimestamp(dir.stat().st_ctime).strftime(
+                    "%Y-%m-%d %H:%M:%S"
+                ),
             )
         )
 
@@ -232,14 +330,12 @@ def results(
 @cli.command()
 def evaluate(
     model: List[str] = typer.Option(
-        None, 
-        help="A list of model names to evaluate.",
-        callback=handle_multiple_input
+        None, help="A list of model names to evaluate.", callback=handle_multiple_input
     ),
     test_category: List[str] = typer.Option(
-        ["all"], 
+        ["all"],
         help="A list of test categories to run the evaluation on.",
-        callback=handle_multiple_input
+        callback=handle_multiple_input,
     ),
     result_dir: str = typer.Option(
         None,
@@ -261,7 +357,9 @@ def evaluate(
     Evaluate results from run of one or more models on a test-category (same as eval_runner.py).
     """
 
-    load_dotenv(dotenv_path=DOTENV_PATH, verbose=True, override=True)  # Load the .env file
+    load_dotenv(
+        dotenv_path=DOTENV_PATH, verbose=True, override=True
+    )  # Load the .env file
     evaluation_main(model, test_category, result_dir, score_dir, partial_eval)
 
 

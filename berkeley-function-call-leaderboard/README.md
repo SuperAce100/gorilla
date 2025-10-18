@@ -72,7 +72,7 @@ pip install -e .
 
 If you simply want to run the evaluation without making code changes, you can
 install the prebuilt wheel instead. **Be careful not to confuse our package with
-the *unrelated* `bfcl` project on PyPI—make sure you install `bfcl-eval`:**
+the _unrelated_ `bfcl` project on PyPI—make sure you install `bfcl-eval`:**
 
 ```bash
 pip install bfcl-eval  # Be careful not to confuse with the unrelated `bfcl` project on PyPI!
@@ -82,27 +82,29 @@ pip install bfcl-eval  # Be careful not to confuse with the unrelated `bfcl` pro
 
 For locally hosted models, choose one of the following backends, ensuring you have the right GPU and OS setup:
 
-`sglang` is *much faster* than `vllm` in our specific multi-turn use case, but it only supports newer GPUs with SM 80+ (Ampere etc).
+`sglang` is _much faster_ than `vllm` in our specific multi-turn use case, but it only supports newer GPUs with SM 80+ (Ampere etc).
 If you are using an older GPU (T4/V100), you should use `vllm` instead as it supports a much wider range of GPUs.
 
 **Using `vllm`:**
+
 ```bash
 pip install -e .[oss_eval_vllm]
 ```
 
 **Using `sglang`:**
+
 ```bash
 pip install -e .[oss_eval_sglang]
 ```
 
-*Optional:* If using `sglang`, we recommend installing `flashinfer` for speedups. Find instructions [here](https://docs.flashinfer.ai/installation.html).
+_Optional:_ If using `sglang`, we recommend installing `flashinfer` for speedups. Find instructions [here](https://docs.flashinfer.ai/installation.html).
 
 ### Configuring Project Root Directory
 
 **Important:** If you installed the package from PyPI (using `pip install bfcl-eval`), you **must** set the `BFCL_PROJECT_ROOT` environment variable to specify where the evaluation results and score files should be stored.
 Otherwise, you'll need to navigate deep into the Python package's source code folder to access the evaluation results and configuration files.
 
-For editable installations (using `pip install -e .`), setting `BFCL_PROJECT_ROOT` is *optional*--it defaults to the `berkeley-function-call-leaderboard` directory.
+For editable installations (using `pip install -e .`), setting `BFCL_PROJECT_ROOT` is _optional_--it defaults to the `berkeley-function-call-leaderboard` directory.
 
 Set `BFCL_PROJECT_ROOT` as an environment variable in your shell environment:
 
@@ -169,14 +171,14 @@ bfcl generate --model MODEL_NAME --run-ids   # --test-category will be ignored
 ```
 
 When this flag is set the generation pipeline reads a JSON file named
-`test_case_ids_to_generate.json` located in the *project root* (the same
+`test_case_ids_to_generate.json` located in the _project root_ (the same
 place where `.env` lives). The file should map each test category to a list of
 IDs to run:
 
 ```json
 {
-    "simple_python": ["simple_python_102", "simple_python_103"],
-    "multi_turn_base": ["multi_turn_base_15"]
+  "simple_python": ["simple_python_102", "simple_python_103"],
+  "multi_turn_base": ["multi_turn_base_15"]
 }
 ```
 
@@ -265,7 +267,7 @@ Once you have the results, run:
 bfcl evaluate --model MODEL_NAME --test-category TEST_CATEGORY
 ```
 
-If you **only** generated a subset of benchmark entries (e.g. by using `--run-ids` during the generation step or by manually editing the result files) and you wish to evaluate *just* those entries, add the `--partial-eval` flag:
+If you **only** generated a subset of benchmark entries (e.g. by using `--run-ids` during the generation step or by manually editing the result files) and you wish to evaluate _just_ those entries, add the `--partial-eval` flag:
 
 ```bash
 bfcl evaluate --model MODEL_NAME --test-category TEST_CATEGORY --partial-eval
@@ -334,3 +336,28 @@ For detailed steps, please see the [Contributing Guide](./CONTRIBUTING.md).
 All the leaderboard statistics, and data used to train the models are released under Apache 2.0.
 BFCL is an open source effort from UC Berkeley and we welcome contributors.
 For any comments, criticisms, or questions, please feel free to raise an issue or a PR. You can also reach us via [email](mailto:huanzhimao@berkeley.edu).
+
+## Agentic ICL Augmentation (experimental)
+
+This repo now includes an optional workflow to compare baseline vs in-context augmented runs on Agentic categories (web_search and memory).
+
+CLI:
+
+- Create split
+  - `bfcl augment split --tag a1 --seed 42`
+- Train pool with model Y (OpenAI FC only)
+  - `bfcl augment train --tag a1 --model-train gpt-4o-mini-2024-07-18-FC`
+- Test model X with augmentation using examples from Y
+  - `bfcl augment test --tag a1 --model-eval gpt-5-2025-08-07-FC --source-model gpt-4o-mini-2024-07-18-FC --retrieval-scope subcategory --k 5`
+- Generate summaries
+  - `bfcl augment report --tag a1`
+- Compare vs baseline
+  - `bfcl augment compare --tag a1 --model-eval gpt-5-2025-08-07-FC --source-model gpt-4o-mini-2024-07-18-FC`
+
+Artifacts under `augment/runs/<TAG>/` include split, train/test results and scores, a success pool and FAISS index, and reports.
+
+Notes:
+
+- Embeddings default to `sentence-transformers/all-MiniLM-L6-v2`.
+- Retrieval scope supports `subcategory` (default, fallback to agentic if <k) or `agentic`.
+- Only OpenAI FC models are allowed: `gpt-4o-mini-2024-07-18-FC`, `gpt-5-2025-08-07-FC`.
