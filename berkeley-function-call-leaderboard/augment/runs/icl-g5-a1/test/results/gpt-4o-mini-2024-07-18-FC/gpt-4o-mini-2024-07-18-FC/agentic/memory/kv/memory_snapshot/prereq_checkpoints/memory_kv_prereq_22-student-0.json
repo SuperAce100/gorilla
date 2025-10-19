@@ -1,0 +1,12 @@
+{
+    "core_memory": {
+        "capstone_project_course": "Capstone Project course",
+        "capstone_project": "machine learning to analyze social media sentiment for better emergency response",
+        "capstone_project_details": "analyzing tweets/posts for disaster or crisis indicators, building an interface for real-time alerts",
+        "project_management": "learning about project management, agile methodology, Scrum Master role",
+        "humanities_elective": "Philosophy of Mind",
+        "humanities_topics": "consciousness, mind, AI implications, ethical considerations",
+        "paper_topic": "whether strong AI could ever truly experience qualia"
+    },
+    "archival_memory": {}
+}

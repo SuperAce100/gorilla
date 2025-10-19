@@ -1,0 +1,8 @@
+{
+    "core_memory": {
+        "pending_reports_status": "wrapped_up_waiting_for_final_approval",
+        "vendor_follow_up_status": "two_responded_one_still_pending",
+        "training_session_preparation": "prep_materials_this_weekend"
+    },
+    "archival_memory": {}
+}
