@@ -24,6 +24,9 @@ from bfcl_eval.model_handler.api_inference.openai_completion import (
     OpenAICompletionsHandler,
 )
 from bfcl_eval.model_handler.api_inference.openai_response import OpenAIResponsesHandler
+from bfcl_eval.model_handler.api_inference.openai_completion import (
+    OpenAICompletionsHandler,
+)
 from bfcl_eval.model_handler.api_inference.qwen import (
     QwenAgentNoThinkHandler,
     QwenAgentThinkHandler,
@@ -75,7 +78,7 @@ from bfcl_eval.model_handler.local_inference.think_agent import ThinkAgentHandle
 @dataclass
 class ModelConfig:
     """
-    Model configuration class for storing model metadata and settings. 
+    Model configuration class for storing model metadata and settings.
 
     Attributes:
         model_name (str): Name of the model as used in the vendor API or on Hugging Face (may not be unique).
@@ -346,7 +349,7 @@ api_inference_model_map = {
         url="https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
         org="OpenAI",
         license="Proprietary",
-        model_handler=OpenAIResponsesHandler,
+        model_handler=OpenAICompletionsHandler,
         input_price=0.15,
         output_price=0.6,
         is_fc_model=True,

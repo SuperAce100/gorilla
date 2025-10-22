@@ -1,12 +1,29 @@
 {
-    "core_memory": {
-        "capstone_project_course": "Capstone Project course",
-        "capstone_project": "machine learning to analyze social media sentiment for better emergency response",
-        "capstone_project_details": "analyzing tweets/posts for disaster or crisis indicators, building an interface for real-time alerts",
-        "project_management": "learning about project management, agile methodology, Scrum Master role",
-        "humanities_elective": "Philosophy of Mind",
-        "humanities_topics": "consciousness, mind, AI implications, ethical considerations",
-        "paper_topic": "whether strong AI could ever truly experience qualia"
-    },
-    "archival_memory": {}
+    "core_memory": {},
+    "archival_memory": {
+        "major": "Computer Science",
+        "year": "fourth",
+        "semester_schedule": "killer, taking higher-level courses",
+        "course_topics": "complex algorithmic concepts, advanced system design, quantum computing basics",
+        "academic_feelings": "surreal to be at this stage, reflecting on past experiences in intro class",
+        "intro_class_experience": "learning about simple data structures",
+        "current_courses": "complex algorithmic concepts, advanced system design, quantum computing basics",
+        "academic_challenges": "crunch time, managing a killer schedule",
+        "personal_reflection": "feels surreal to be at this stage in college",
+        "higher_level_courses": "complex algorithmic concepts, advanced system design, quantum computing basics",
+        "academic_progress": "transitioning from intro classes to advanced topics",
+        "current_academic_stage": "fourth year, taking higher-level courses",
+        "academic_milestones": "finally taking higher-level courses",
+        "reflection_on_journey": "from intro class to tackling complex topics",
+        "quantum_computing_basics": "part of current coursework",
+        "advanced_system_design": "part of current coursework",
+        "complex_algorithmic_concepts": "part of current coursework",
+        "intro_class": "learning about simple data structures",
+        "academic_reflection": "surreal feeling about being in fourth year",
+        "academic_focus": "higher-level courses in Computer Science",
+        "current_academic_focus": "complex algorithmic concepts, advanced system design, quantum computing basics",
+        "academic_schedule": "killer schedule this semester",
+        "academic_challenges_current": "managing a killer schedule while taking advanced courses",
+        "academic_growth": "transitioning from simple data structures to complex topics"
+    }
 }

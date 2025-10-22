@@ -1,8 +1,13 @@
 {
     "core_memory": {
-        "pending_reports_status": "wrapped_up_waiting_for_final_approval",
-        "vendor_follow_up_status": "two_responded_one_still_pending",
-        "training_session_preparation": "prep_materials_this_weekend"
+        "team_meeting_duration": "ran over by 30 minutes",
+        "it_security_protocols_update": "change passwords ASAP",
+        "client_call_with_jacob": "delayed till Wednesday"
     },
-    "archival_memory": {}
+    "archival_memory": {
+        "client_call_with_jacob_delay": "delayed till Wednesday",
+        "client_call_with_jacob": "delayed_till_wednesday",
+        "client_call_jacob_delay": "delayed_till_wednesday",
+        "client_call_jacob": "delayed_till_wednesday"
+    }
 }

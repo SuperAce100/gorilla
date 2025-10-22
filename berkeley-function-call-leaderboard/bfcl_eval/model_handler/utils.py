@@ -191,13 +191,18 @@ def convert_to_tool(functions, mapping, model_style):
         ]:
             oai_tool.append(item)
         elif model_style in [ModelStyle.OPENAI_RESPONSES]:
-            # OpenAI Responses API expects name at the top level for tools
+            # Be maximally compatible: provide both top-level name and nested function block
             oai_tool.append(
                 {
                     "type": "function",
                     "name": item["name"],
                     "description": item.get("description", ""),
                     "parameters": item["parameters"],
+                    "function": {
+                        "name": item["name"],
+                        "description": item.get("description", ""),
+                        "parameters": item["parameters"],
+                    },
                 }
             )
         elif model_style in [
