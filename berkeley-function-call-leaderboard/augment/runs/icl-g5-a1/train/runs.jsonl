@@ -1,1 +1,0 @@
-{"model_train": "gpt-5-2025-08-07-FC", "embedding_model": "sentence-transformers/all-MiniLM-L6-v2", "subcategories": ["memory_kv", "memory_rec_sum", "memory_vector", "web_search_base", "web_search_no_snippet"], "success_count": 0}
