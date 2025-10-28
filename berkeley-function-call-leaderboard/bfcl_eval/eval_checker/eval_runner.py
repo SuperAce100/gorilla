@@ -85,8 +85,23 @@ def _evaluate_single_agentic_entry(
     if "function" in prompt_entry:
         del prompt_entry["function"]
 
-    # Agentic test is a single-turn multi-step test, so the model result should be a list of one element
-    if type(model_result_list) != list or len(model_result_list) != 1:
+    # Normalize result shape to be robust against handler differences.
+    # Expected canonical shape: [[step1, step2, ...]] (single turn → list of steps)
+    normalized_steps = None
+    if isinstance(model_result_list, list):
+        if len(model_result_list) == 1 and isinstance(model_result_list[0], list):
+            normalized_steps = model_result_list[0]
+        elif all(isinstance(step, (str, dict, list)) for step in model_result_list):
+            # Already a flat step list
+            normalized_steps = model_result_list
+        elif len(model_result_list) > 1 and isinstance(model_result_list[-1], list):
+            # Take the last turn's steps if nested
+            normalized_steps = model_result_list[-1]
+    elif isinstance(model_result_list, (str, dict)):
+        # Single text/dict response – treat as one-step turn
+        normalized_steps = [model_result_list]
+
+    if normalized_steps is None:
         return {
             "id": index,
             "model_name": model_name,
@@ -94,7 +109,7 @@ def _evaluate_single_agentic_entry(
             "valid": False,
             "error": {
                 "error_message": [
-                    "Error during inference phase. Model did not output a list of model responses."
+                    "Error during inference phase. Model result has an unsupported shape."
                 ],
                 "error_type": "agentic:inference_error",
             },
@@ -111,7 +126,7 @@ def _evaluate_single_agentic_entry(
     model_result_list_decoded: list[list[str]] = []
     last_unsuccessful_decoding_message = None
 
-    for model_result_item in model_result_list[0]:
+    for model_result_item in normalized_steps:
         # model_result_item is per step
         try:
             decoded_result: list[str] = handler.decode_execute(

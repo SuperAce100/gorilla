@@ -1,0 +1,2 @@
+Rank,Model,Agentic Overall Acc,Web Search Summary,Web Search Base,Web Search No Snippet,Memory Summary,Memory KV,Memory Vector,Memory Recursive Summarization
+1,GPT-5-2025-08-07 (FC),41.98%,78.79%,81.82%,75.76%,5.18%,3.88%,6.80%,4.85%

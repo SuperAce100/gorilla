@@ -269,6 +269,20 @@ class BaseHandler:
                 current_step_inference_log.append(log_entry)
 
                 # Try decoding the model response
+                # If the model emits a final plain-text answer (no tool calls),
+                # treat it as completion and stop without attempting to decode.
+                if isinstance(model_responses, str) or (
+                    isinstance(model_responses, list)
+                    and all(isinstance(x, str) for x in model_responses)
+                ):
+                    current_step_inference_log.append(
+                        {
+                            "role": "handler_log",
+                            "content": "Final text answer received. Stopping further tool calls.",
+                        }
+                    )
+                    break
+
                 try:
                     decoded_model_responses = self.decode_execute(
                         model_responses, has_tool_call_tag=False
