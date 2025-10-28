@@ -1,0 +1,24 @@
+{
+    "core_memory": {
+        "next_id": 2,
+        "store": {
+            "0": "User uses a notebook to track doctor\u2019s appointments and medications.",
+            "1": "User emphasizes the importance of being proactive in managing their health."
+        }
+    },
+    "archival_memory": {
+        "next_id": 10,
+        "store": {
+            "0": "User is in their mid-50s and has experienced various health ups and downs over the years, including surgeries, medications, and chronic conditions. They try to stay on top of their health. User lives in Kansas, where they need to be careful with joint pain and seasonal illnesses, especially during rough winters.",
+            "1": "User has Type 2 Diabetes, diagnosed about ten years ago. They had to rethink their diet and lifestyle, cutting out sugary snacks, watching carb intake, and increasing physical activity. User checks their blood sugar levels regularly and finds that small habits, like a 30-minute walk after dinner, help keep glucose levels stable. Their doctor has been supportive in guiding them through the process.",
+            "2": "User has hypertension, which runs in their family. They manage it with medication and lifestyle changes, including diet and light exercise like walking and yoga. User has noticed that stress can worsen their hypertension. They adapt to Kansas weather by doing indoor workouts or using a treadmill during winter. A significant event was a dangerous spike in blood pressure a few years ago that led to an ER visit, which served as a wake-up call.",
+            "3": "User has osteoarthritis, primarily affecting their knees and hands. Symptoms vary, with increased pain during weather changes. Their doctor recommended physical therapy, which has been beneficial. User is trying different supplements like glucosamine but is unsure of their effectiveness. They have made lifestyle changes, such as using ergonomic chairs, wearing good shoes, and avoiding overexertion on their joints.",
+            "4": "User has hypothyroidism, diagnosed in their early 40s after experiencing constant exhaustion and unexplained weight gain. Initially thought it was part of aging, but tests revealed thyroid levels were off. User has learned to be patient with the condition, as it took time to find the right medication dosage. They feel good as long as they stay on top of their medications and have regular check-ins with their doctor.",
+            "5": "User had gallbladder removal surgery a few years ago after dealing with gallstones for years. They experienced a severe gallbladder attack that led to the surgery. Recovery was manageable, but digestion has changed since then, requiring them to learn which foods to avoid, particularly fried and greasy foods.",
+            "6": "User has seasonal allergies that flare up every spring due to high pollen levels in Kansas. They had pneumonia a couple of years ago, which led to a long recovery. Since then, they have been diligent about getting their flu shot and pneumonia vaccine to prevent infections.",
+            "7": "User finds it challenging to keep up with multiple doctor\u2019s appointments and medications, including visits to an endocrinologist for diabetes, a primary care doctor, and sometimes a specialist for arthritis. They use a notebook to track appointments, medication changes, and notes about their health, as they find it easier than using online patient portals.",
+            "8": "User finds it challenging to keep up with multiple doctor\u2019s appointments and medications, including visits to an endocrinologist for diabetes, a primary care doctor, and sometimes a specialist for arthritis. They use a notebook to track appointments, medication changes, and notes about their health, as they find it easier than using online patient portals.",
+            "9": "User is focused on staying healthy and has learned to take it one step at a time as they age. They emphasize the importance of listening to their body, taking rest when needed, and not ignoring any health concerns. Their biggest takeaway is the need to be proactive in managing their health."
+        }
+    }
+}

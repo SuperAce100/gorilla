@@ -1,13 +1,14 @@
 {
     "core_memory": {
-        "next_id": 6,
+        "next_id": 27,
         "store": {
-            "0": "Schedule dentist appointment.",
-            "1": "Stick to gym 3x this week.",
-            "2": "Call mom\u2014it\u2019s been a while.",
-            "3": "Wash dishes tonight before it piles up.",
-            "4": "Take out trash Wednesday morning.",
-            "5": "Wash and vacuum car on Sunday."
+            "20": "Schedule bloodwork for annual physical next month.",
+            "21": "Schedule bloodwork for annual physical next month.",
+            "22": "Schedule bloodwork for annual physical next month.",
+            "23": "Schedule bloodwork for annual physical next month.",
+            "24": "Schedule bloodwork for annual physical next month.",
+            "25": "Schedule bloodwork for annual physical next month.",
+            "26": "Schedule bloodwork for annual physical next month."
         }
     },
     "archival_memory": {

@@ -1,0 +1,2 @@
+Rank,Model,Agentic Overall Acc,Web Search Summary,Web Search Base,Web Search No Snippet,Memory Summary,Memory KV,Memory Vector,Memory Recursive Summarization
+1,GPT-4o-mini-2024-07-18 (FC),26.53%,33.82%,50.00%,17.65%,19.23%,11.54%,9.62%,36.54%

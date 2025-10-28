@@ -1,15 +1,18 @@
 {
     "core_memory": {
-        "next_id": 75,
+        "next_id": 109,
         "store": {
             "57": "User describes their family as supportive, close-knit, and lively. They see the way their family comes together around Archie as a representation of unconditional love. User feels welcomed at home, despite their busy schedule as a fourth-year student.",
-            "58": "User considers their closest friends at college as their second family. They have been at college for four years and believe that the people they have met keep them grounded and happy. They initially felt nervous about fitting in when they first arrived on campus.",
-            "59": "User finds campus life vibrant and acknowledges the challenges of keeping track of everything. As a fourth-year Computer Science student, they have seen how the culture has evolved and discovered various communities that make the campus feel like a second home.",
-            "74": "User finds a seat in the student center or a quiet corner of the library upon arriving on campus to finalize small tasks, like tweaking code for a morning lab or adjusting their to-do list. They use a digital task manager that syncs across devices and categorizes tasks by class or project."
+            "59": "User finds campus life vibrant but acknowledges the challenges of juggling a full course load and research projects as a fourth-year Computer Science student. They feel nostalgic about home and their family, especially their dog, Archie.",
+            "104": "User spends time in the campus library for a quieter study space, especially as a fourth-year CS major juggling advanced courses, research, and extracurriculars.",
+            "105": "User spends time in the campus library for a quieter study space, especially as a fourth-year CS major juggling advanced courses, research, and extracurriculars.",
+            "106": "User spends time in the campus library for a quieter study space, especially as a fourth-year CS major juggling advanced courses, research, and extracurriculars.",
+            "107": "User spends time in the campus library for a quieter study space, especially as a fourth-year CS major juggling advanced courses, research, and extracurriculars.",
+            "108": "User spends time in the campus library for a quieter study space, especially as a fourth-year CS major juggling advanced courses, research, and extracurriculars."
         }
     },
     "archival_memory": {
-        "next_id": 103,
+        "next_id": 113,
         "store": {
             "55": "User considers their closest friends at college as their second family. They have been at college for four years and believe that the people they have met keep them grounded and happy.",
             "56": "User is a fourth-year computer science major who values friendship highly, considering their college friends as a second family. They initially felt nervous about fitting in when they first arrived on campus, but formed tight bonds that help manage the stresses of their studies.",
@@ -32,7 +35,6 @@
             "73": "User's experience as a fourth-year Computer Science major includes managing the stresses of coursework through strong friendships and effective time management.",
             "74": "User's academic responsibilities as a fourth-year Computer Science major include attending classes, completing assignments, and preparing for exams, all of which require effective time management.",
             "75": "User's social interactions as a fourth-year Computer Science major involve spending time with friends, who they consider a second family, which helps alleviate the stresses of their academic life.",
-            "76": "User's personal time as a fourth-year Computer Science major is dedicated to relaxation and self-care, which is crucial for maintaining balance amidst their busy schedule.",
             "77": "User's approach to balance as a fourth-year Computer Science major involves integrating academic, social, and personal aspects of life to create a harmonious routine.",
             "78": "User regrets not joining more clubs during their freshman year due to feeling overwhelmed by the transition from high school to college and focusing on classes. They eventually realized the importance of campus experience beyond academics and joined several student organizations.",
             "79": "User is involved in the Computer Science Society, which hosts weekly meetups to discuss new technologies, share personal projects, and invite industry speakers. They find it a welcoming environment, even for beginners, and often seek help from fellow members on tricky concepts like concurrency or containerization.",
@@ -58,7 +60,10 @@
             "99": "User describes the annual 'Midnight Breakfast' event during finals week as a morale booster for stressed-out students. Professors serve food, and the school band may perform, providing a break from studying.",
             "100": "User appreciates traditions like Midnight Breakfast that foster a sense of community and fun during high-pressure times, reminding students they are not alone in their anxiety about final exams.",
             "101": "User reflects on campus life as what you make of it, emphasizing the importance of exploring, meeting new people, and joining clubs to enrich the experience. They acknowledge the challenges of a demanding major like Computer Science but find attending events and connecting with communities rewarding.",
-            "102": "User looks back on their four years with fond memories of late-night coding, game nights in the dorm, Tech Fest presentations, hackathons, and the excitement of the Rivalry Game. They express a willingness to give tours and introduce others to clubs, highlighting the diverse opportunities on campus."
+            "102": "User looks back on their four years with fond memories of late-night coding, game nights in the dorm, Tech Fest presentations, hackathons, and the excitement of the Rivalry Game. They express a willingness to give tours and introduce others to clubs, highlighting the diverse opportunities on campus.",
+            "103": "User is a fourth-year Computer Science major and is feeling pressure to have a solid plan for after graduation. They are currently leaning towards entering the industry for 5 years but haven't ruled out grad school.",
+            "104": "User is a fourth-year Computer Science major feeling pressure to have a solid plan for after graduation. They are leaning towards entering the industry for 5 years but haven't ruled out grad school.",
+            "112": "User's travel story reflects a passion for exploring that they plan to nurture even after graduation. They are anxious about their future career in computer science and hope to find a job that allows for remote work or flexible scheduling to continue exploring. User is open to weekend trips or international flights and would love to combine their coding skills with travel, such as working abroad or collaborating on international projects. For now, they enjoy planning their next journey in their head as a mental break from debugging code, which keeps them motivated and excited for the next phase of their life."
         }
     }
 }

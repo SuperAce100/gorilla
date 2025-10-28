@@ -1,0 +1,22 @@
+{
+    "core_memory": {
+        "user_name": "Michael"
+    },
+    "archival_memory": {
+        "user_name": "Michael",
+        "user_location": "Seattle",
+        "user_age": "35",
+        "user_profession": "freelance graphic designer",
+        "user_coffee_preference": "coffee enthusiast",
+        "user_accounting_habits": "tracks every expense carefully as a freelancer",
+        "user_interest_in_membership_program": "discussed but did not sign up for anything that incurs a recurring fee",
+        "user_experience_with_website": "noticed lag during order of coffee canisters and digital scale, received two order confirmation emails, one canceled due to server timeout",
+        "user_preference_for_direct_resolution": "prefers to resolve issues directly with the company rather than involving the credit card company",
+        "user_theory_about_charge": "suspects charge might be related to taxes or duties for out-of-state shipment, but amount doesn't match typical sales tax or product prices",
+        "user_theory_about_system_error": "suspects account might be flagged for a membership system glitch or leftover shipping fee, but shipping confirmation emails show everything is tidy",
+        "user_willingness_to_pay_legitimate_charges": "willing to pay for legitimate charges if received product or agreed to service",
+        "user_interest_in_membership_explanation": "curious about membership offerings but does not expect to be automatically signed up",
+        "user_transaction_details": "charge amount approximately $49.99, posted three days ago, no additional descriptor on card statement",
+        "user_desire_for_clarity_and_resolution": "wants to ensure not paying for something not signed up for, prefers to avoid dispute with card issuer"
+    }
+}

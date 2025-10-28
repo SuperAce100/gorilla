@@ -1,0 +1,30 @@
+{
+    "core_memory": {
+        "next_id": 4,
+        "store": {
+            "0": "Schedule dentist appointment.",
+            "1": "Stick to gym 3x this week.",
+            "2": "Call mom\u2014it\u2019s been a while.",
+            "3": "Wash dishes tonight before it piles up."
+        }
+    },
+    "archival_memory": {
+        "next_id": 14,
+        "store": {
+            "0": "Separate laundry colors, don\u2019t mix whites.",
+            "1": "Fix leaky sink in the kitchen\u2014YouTube how-to if needed.",
+            "2": "Take out trash Wednesday morning.",
+            "3": "Vacuum living room.",
+            "4": "Mop the kitchen floor\u2014sticky from last night\u2019s spill.",
+            "5": "Wash and vacuum car on Sunday.",
+            "6": "Check tire pressure.",
+            "7": "Refill windshield wiper fluid.",
+            "8": "Sort through closet\u2014donate old clothes.",
+            "9": "Shred old mail.",
+            "10": "Restock pantry\u2014running low on rice and cereal.",
+            "11": "Tighten loose cabinet handle.",
+            "12": "Replace bathroom lightbulb.",
+            "13": "Patch up minor wall scuffs."
+        }
+    }
+}

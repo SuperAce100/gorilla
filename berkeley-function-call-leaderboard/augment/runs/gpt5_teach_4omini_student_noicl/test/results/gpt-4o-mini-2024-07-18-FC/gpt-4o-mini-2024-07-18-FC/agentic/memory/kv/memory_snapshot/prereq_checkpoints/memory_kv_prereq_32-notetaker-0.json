@@ -1,0 +1,13 @@
+{
+    "core_memory": {
+        "team_meeting_overrun": "Team meeting ran over by 30 minutes.",
+        "it_security_protocols_update": "Change passwords ASAP due to updated security protocols.",
+        "client_call_delay": "Client call with Jacob delayed till Wednesday."
+    },
+    "archival_memory": {
+        "team_meeting_overrun": "Team meeting ran over by 30 minutes.",
+        "it_security_protocols_update": "Change passwords ASAP due to updated security protocols.",
+        "client_call_delay": "Client call with Jacob delayed till Wednesday.",
+        "client_call_jacob_delay": "Client call with Jacob delayed till Wednesday."
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "core_memory": {
+        "next_id": 29,
+        "store": {
+            "15": "User has been involved in undergrad research since the end of their sophomore year, which has been eye-opening. They didn't initially see themselves in research, but a professor encouraged them to apply for a research assistant position in a lab focused on data visualization.",
+            "23": "User is a co-author on two workshop papers and is currently working on a larger conference submission for the IEEE Visualization Conference(IEEE VIS). They are focusing on a user study comparing traditional 2D dashboards with an interactive VR environment.",
+            "28": "User reflects on their journey in the research world, describing it as chaotic yet rewarding. They appreciate the potential impact of their work in the lab on how scientists understand data in the future."
+        }
+    },
+    "archival_memory": {
+        "next_id": 20,
+        "store": {
+            "0": "User occasionally shares interesting findings with their lab, leading to discussions on how to incorporate new techniques into their workflow.",
+            "1": "User participates in spontaneous brainstorming sessions with graduate students, discussing practical applications of advanced theoretical concepts, such as offloading processing to the GPU.",
+            "2": "User encountered local startup representatives at the symposiums who provided interesting perspectives on how VR for data visualization could benefit commercial industries, such as marketing analytics and architecture.",
+            "3": "User encountered local startup representatives at the symposiums who provided perspectives on how VR for data visualization could benefit commercial industries, such as marketing analytics and architecture.",
+            "4": "User encountered local startup representatives at the symposiums who provided perspectives on how VR for data visualization could benefit commercial industries, such as marketing analytics and architecture.",
+            "5": "User's hypothesis is that VR immersion helps researchers spot anomalies or trends faster than with 2D charts. They conducted user trials with 15 participants, recording times and collecting UX questionnaire responses.",
+            "6": "User is handling sections on system architecture and prototype design for the paper, while others focus on user study methodology and narrative cohesion.",
+            "7": "User is balancing their research work with senior coursework and a capstone project.",
+            "8": "User finds the idea of contributing to cutting-edge knowledge in areas like data visualization or machine learning tempting but wants to see how these concepts are applied in real product development.",
+            "9": "User's mentor suggested that stepping into industry can provide a better perspective on relevant problems, which could lead to a more practical approach if they decide to pursue a PhD later.",
+            "10": "User believes that research is about building on the foundation of what others have done, and they value the sense of collaboration within their lab and the global research community.",
+            "11": "User values the sense of collaboration within their lab and the global research community, believing that research is about building on the foundation of what others have done.",
+            "12": "User's lab managed to restore most of the data, which highlighted the importance of data backups. They subsequently set up a better backup system and checks to avoid relying on a single point of failure.",
+            "13": "User found the stressful experience to be a bonding moment for the whole lab.",
+            "14": "User's PI has recommended them for scholarships, events, and networking opportunities, including a virtual workshop on immersive analytics with academic experts from around the world.",
+            "15": "User found it fascinating to witness debates among experts on technical details and new frameworks during the workshop, feeling like they were witnessing the frontier of computer science knowledge.",
+            "16": "User is motivated by the idea that the VR and immersive technologies they are pioneering might become standard tools in the future, allowing them to look back and recognize their contributions.",
+            "17": "User acknowledges that this research experience has changed their perspective on computer science, innovation, and teamwork, and they can't imagine their undergrad years without it.",
+            "18": "User is motivated by the idea that the VR and immersive technologies they are pioneering might become standard tools in the future, allowing them to look back and recognize their contributions.",
+            "19": "User acknowledges that this research experience has changed their perspective on computer science, innovation, and teamwork, and they can't imagine their undergrad years without it."
+        }
+    }
+}

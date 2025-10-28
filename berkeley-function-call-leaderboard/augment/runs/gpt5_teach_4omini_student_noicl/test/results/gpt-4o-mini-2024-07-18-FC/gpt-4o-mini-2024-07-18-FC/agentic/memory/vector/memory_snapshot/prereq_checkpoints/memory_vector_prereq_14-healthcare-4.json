@@ -1,0 +1,44 @@
+{
+    "core_memory": {
+        "next_id": 16,
+        "store": {
+            "9": "User is managing hypothyroidism with levothyroxine.",
+            "10": "User is managing osteoarthritis with acetaminophen and meloxicam.",
+            "11": "User is managing low vitamin D levels with vitamin D3 and takes calcium supplements for osteopenia.",
+            "12": "User is managing cholesterol with atorvastatin.",
+            "13": "User is managing general health with a multivitamin, omega-3 supplements, probiotics, and digestive enzymes.",
+            "14": "User is mindful of medication interactions and takes precautions with their medications.",
+            "15": "User is committed to a healthy lifestyle and managing their health naturally."
+        }
+    },
+    "archival_memory": {
+        "next_id": 25,
+        "store": {
+            "0": "User's thyroid numbers were stable, with a TSH of 2.1 mIU/L, which is in the normal range(0.5-4.5 mIU/L).",
+            "1": "User has had issues with hypothyroidism in the past and gets their thyroid checked regularly.",
+            "2": "User's T4 levels were good at 1.2 ng/dL, indicating that their current dosage of levothyroxine is working well.",
+            "3": "User's bone density scan showed a slight decline, with a spine T-score of -1.8, indicating osteopenia.",
+            "4": "User's hip T-score was -1.5, which is also in the borderline range.",
+            "5": "User's doctor advised them to keep up with strength training and calcium intake to prevent further bone loss.",
+            "6": "User has started adding more dairy and leafy greens to their diet and takes a calcium supplement with vitamin K2 to help with absorption.",
+            "7": "User's liver and kidney function tests were mostly fine, but their ALT levels were elevated at 42 U/L(normal is under 35 U/L).",
+            "8": "User's doctor thinks the elevated ALT levels might be related to recent medication adjustments.",
+            "9": "User's creatinine levels were at 0.9 mg/dL, which is well within the normal range(0.6-1.2 mg/dL), indicating no concerns with kidney function.",
+            "10": "User's C-reactive protein(CRP) was at 3.2 mg/L, slightly elevated(ideal is under 3.0 mg/L), indicating some mild inflammation, probably related to osteoarthritis.",
+            "11": "User's ESR(erythrocyte sedimentation rate) was 18 mm/hr, which is within the normal range(0-20 mm/hr), indicating no major inflammation.",
+            "12": "User feels good about their latest test results but needs to work on keeping blood sugar in check and increasing vitamin D levels.",
+            "13": "User has learned that tracking their health numbers regularly helps them stay on top of their health.",
+            "14": "User believes in making small, consistent changes to keep feeling their best.",
+            "15": "User has a history of managing diabetes, hypertension, osteoarthritis, and hypothyroidism. They have adjusted medications multiple times to find what works best. User keeps track of medications to avoid missing doses or mixing prescriptions. They review medications with their doctor every few months for potential adjustments.",
+            "16": "User takes metformin 1000 mg twice daily for Type 2 Diabetes, which helps keep blood sugar in check. Their A1C is around 6.9%. Their doctor suggested adding semaglutide(Ozempic) at a low dose, which has helped control their appetite. User checks fasting blood sugar at home regularly, usually between 125-130 mg/dL.",
+            "17": "User takes losartan 50 mg once daily for high blood pressure, keeping readings mostly in the 135-140/80-90 mmHg range. Their doctor suggests stress management and reducing sodium intake instead of increasing the dosage. User also takes a daily magnesium supplement for blood pressure regulation.",
+            "18": "User takes levothyroxine 75 mcg every morning for hypothyroidism, ensuring to take it on an empty stomach and waiting at least 30 minutes before eating. Their last TSH test was 2.1 mIU/L, within the normal range, so their doctor hasn't changed the dosage in years. User uses a pill organizer to avoid feeling sluggish from missed doses.",
+            "19": "User manages osteoarthritis with acetaminophen as needed for mild pain and meloxicam 7.5 mg for more severe pain, but does not take it daily to avoid overuse of NSAIDs. They find meloxicam helpful for stiffness in knees and hands. User has tried glucosamine supplements but is unsure of their effectiveness.",
+            "20": "User's last blood test showed low vitamin D levels at 22 ng/mL, so they now take vitamin D3 2,000 IU daily. They also take calcium supplements due to early signs of osteopenia from their last bone density scan. Their doctor recommended combining calcium with vitamin K2 for better absorption.",
+            "21": "User takes atorvastatin 10 mg daily to manage cholesterol, as their LDL was 130 mg/dL and triglycerides were 140 mg/dL. Their doctor recommended a low-dose statin, and their cholesterol numbers have been improving without any reported side effects.",
+            "22": "User takes a daily multivitamin, omega-3 supplements for heart health, and probiotics for digestion. Since their gallbladder was removed, they sometimes take digestive enzymes when eating heavier foods, as losing their gallbladder changed the way they digest fatty foods.",
+            "23": "User monitors potential medication interactions, particularly between losartan and meloxicam, as NSAIDs can affect kidney function. They limit meloxicam use and ensure to take their thyroid medication separately from calcium and iron supplements to avoid absorption interference.",
+            "24": "User feels their medication routine is working well and stays organized with a pill planner and phone reminders. They focus on lifestyle changes to reduce reliance on medications and aim to stay healthy while managing things naturally when possible."
+        }
+    }
+}

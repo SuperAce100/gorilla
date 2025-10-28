@@ -1,0 +1,33 @@
+{
+    "core_memory": {
+        "next_id": 6,
+        "store": {
+            "0": "User prioritizes sleep and has improved their sleep hygiene.",
+            "1": "User prioritizes skin care, focusing on hydration and sun protection.",
+            "2": "User values social connections for mental well-being and stays socially active.",
+            "3": "User engages in activities to keep their brain sharp and values lifelong learning.",
+            "4": "User is managing chronic pain from osteoarthritis and is exploring gentle exercises for relief.",
+            "5": "User embraces aging and values the wisdom that comes with experience."
+        }
+    },
+    "archival_memory": {
+        "next_id": 15,
+        "store": {
+            "0": "User's thyroid numbers were stable, with a TSH of 2.1 mIU/L, which is in the normal range(0.5-4.5 mIU/L).",
+            "1": "User has had issues with hypothyroidism in the past and gets their thyroid checked regularly.",
+            "2": "User's T4 levels were good at 1.2 ng/dL, indicating that their current dosage of levothyroxine is working well.",
+            "3": "User's bone density scan showed a slight decline, with a spine T-score of -1.8, indicating osteopenia.",
+            "4": "User's hip T-score was -1.5, which is also in the borderline range.",
+            "5": "User's doctor advised them to keep up with strength training and calcium intake to prevent further bone loss.",
+            "6": "User has started adding more dairy and leafy greens to their diet and takes a calcium supplement with vitamin K2 to help with absorption.",
+            "7": "User's liver and kidney function tests were mostly fine, but their ALT levels were elevated at 42 U/L(normal is under 35 U/L).",
+            "8": "User's doctor thinks the elevated ALT levels might be related to recent medication adjustments.",
+            "9": "User's creatinine levels were at 0.9 mg/dL, which is well within the normal range(0.6-1.2 mg/dL), indicating no concerns with kidney function.",
+            "10": "User's C-reactive protein(CRP) was at 3.2 mg/L, slightly elevated(ideal is under 3.0 mg/L), indicating some mild inflammation, probably related to osteoarthritis.",
+            "11": "User's ESR(erythrocyte sedimentation rate) was 18 mm/hr, which is within the normal range(0-20 mm/hr), indicating no major inflammation.",
+            "12": "User feels good about their latest test results but needs to work on keeping blood sugar in check and increasing vitamin D levels.",
+            "13": "User has learned that tracking their health numbers regularly helps them stay on top of their health.",
+            "14": "User believes in making small, consistent changes to keep feeling their best."
+        }
+    }
+}

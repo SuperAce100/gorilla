@@ -1,0 +1,43 @@
+{
+    "core_memory": {
+        "next_id": 4,
+        "store": {
+            "0": "Vitamin D3\u20141000 IU daily.",
+            "1": "Omega-3s\u2014good for joints.",
+            "2": "Remember to take iron supplements\u2014iron levels were low last check-up.",
+            "3": "Probiotics\u2014help with digestion, take in the morning."
+        }
+    },
+    "archival_memory": {
+        "next_id": 27,
+        "store": {
+            "0": "Separate laundry colors, don\u2019t mix whites.",
+            "1": "Fix leaky sink in the kitchen\u2014YouTube how-to if needed.",
+            "2": "Take out trash Wednesday morning.",
+            "3": "Vacuum living room.",
+            "4": "Mop the kitchen floor\u2014sticky from last night\u2019s spill.",
+            "5": "Wash and vacuum car on Sunday.",
+            "6": "Check tire pressure.",
+            "7": "Refill windshield wiper fluid.",
+            "8": "Sort through closet\u2014donate old clothes.",
+            "9": "Shred old mail.",
+            "10": "Restock pantry\u2014running low on rice and cereal.",
+            "11": "Tighten loose cabinet handle.",
+            "12": "Replace bathroom lightbulb.",
+            "13": "Patch up minor wall scuffs.",
+            "14": "Daycare: Drop-off at 8 AM, pick-up at 5 PM. Monthly payment due Friday. Bring extra set of clothes\u2014last set got muddy.",
+            "15": "Elementary school: Finalize admission paperwork.",
+            "16": "Attend orientation next Thursday.",
+            "17": "Research after-school programs.",
+            "18": "Schedule pediatrician visit for kid's cold.",
+            "19": "Check vaccine schedule\u2014next shots due in two months.",
+            "20": "Monitor food allergies\u2014keep a log if symptoms flare up.",
+            "21": "Take kid to park this weekend.",
+            "22": "Pick out a new bedtime story book.",
+            "23": "Help with counting practice\u2014focus on numbers 1-20.",
+            "24": "Buy more diapers.",
+            "25": "Get school supplies\u2014crayons, notebooks, glue sticks.",
+            "26": "Pack extra snacks in daycare bag."
+        }
+    }
+}

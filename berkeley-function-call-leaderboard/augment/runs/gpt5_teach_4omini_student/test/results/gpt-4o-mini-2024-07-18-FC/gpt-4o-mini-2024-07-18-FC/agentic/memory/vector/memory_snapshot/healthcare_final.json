@@ -1,17 +1,18 @@
 {
     "core_memory": {
-        "next_id": 6,
+        "next_id": 16,
         "store": {
-            "0": "User prioritizes sleep, needing seven to eight hours for optimal rest and has improved sleep hygiene.",
-            "1": "User prioritizes skin care as they age, emphasizing hydration and daily sunscreen use.",
-            "2": "User values social connections for mental well-being and stays socially active by meeting friends and participating in a book club.",
-            "3": "User engages in lifelong learning to keep their brain sharp, including doing puzzles, reading, and taking online classes.",
-            "4": "User is learning to manage chronic pain from osteoarthritis as they age, focusing on finding ways to cope with discomfort.",
-            "5": "User embraces aging and values the wisdom that comes with experience."
+            "9": "User takes levothyroxine 75 mcg every morning for hypothyroidism.",
+            "10": "User takes acetaminophen as needed for osteoarthritis pain and meloxicam 7.5 mg as prescribed.",
+            "11": "User takes vitamin D3 2,000 IU daily and calcium supplements due to low vitamin D levels and early signs of osteopenia.",
+            "12": "User takes atorvastatin 10 mg daily for cholesterol management.",
+            "13": "User takes a daily multivitamin, omega-3 supplements, and probiotics for general health.",
+            "14": "User is cautious about potential medication interactions, especially with losartan and meloxicam.",
+            "15": "User uses a pill planner and phone reminders to manage their medication routine."
         }
     },
     "archival_memory": {
-        "next_id": 19,
+        "next_id": 29,
         "store": {
             "0": "User's vitamin D levels came back at 22 ng/mL, which is considered deficient.",
             "1": "The normal range for vitamin D is 30-50 ng/mL.",
@@ -31,7 +32,17 @@
             "15": "User's ESR(erythrocyte sedimentation rate) was 18 mm/hr, which is within the normal range(0-20 mm/hr), indicating no major inflammation.",
             "16": "User feels good about their latest test results but recognizes the need to work on keeping blood sugar in check and increasing vitamin D levels.",
             "17": "User has learned that tracking their health numbers regularly helps them stay on top of their health.",
-            "18": "User believes in making small, consistent changes to keep feeling their best."
+            "18": "User believes in making small, consistent changes to keep feeling their best.",
+            "19": "User has a history of managing diabetes, hypertension, osteoarthritis, and hypothyroidism, adjusting medications over the years to find what works best. They keep track of their medications to avoid missing doses or mixing prescriptions. User reviews their medications with their doctor every few months for potential adjustments.",
+            "20": "User has Type 2 Diabetes and has been taking metformin 1000 mg twice daily for several years, keeping their blood sugar in check. Their A1C hovers around 6.9%. Recently, their doctor suggested adding a GLP-1 receptor agonist, semaglutide(Ozempic), at a low dose, which has helped control their appetite. User checks their fasting blood sugar at home regularly, usually between 125-130 mg/dL.",
+            "21": "User takes losartan 50 mg once daily for high blood pressure, keeping readings mostly in the 135-140/80-90 mmHg range. Their doctor suggests stress management and reducing sodium intake instead of increasing the dosage. User also takes a daily magnesium supplement to help with blood pressure regulation.",
+            "22": "User has stable hypothyroidism on levothyroxine 75 mcg every morning, taken on an empty stomach with a 30-minute wait before eating. Their last TSH test was 2.1 mIU/L, within the normal range, so their doctor hasn't changed the dosage in years. User feels sluggish if they miss a dose and uses a pill organizer to stay on track.",
+            "23": "User manages osteoarthritis by taking acetaminophen as needed for mild pain and meloxicam 7.5 mg as prescribed for more severe pain. They do not take meloxicam daily to avoid overusing NSAIDs. User finds it helpful for stiffness in their knees and hands. Their doctor suggested trying glucosamine supplements, but they are unsure of their effectiveness.",
+            "24": "User's last blood test showed low vitamin D levels at 22 ng/mL, so they now take vitamin D3 2,000 IU daily. They also take calcium supplements due to early signs of osteopenia from their last bone density scan. Their doctor recommended combining calcium with vitamin K2 to help with absorption.",
+            "25": "User takes atorvastatin 10 mg daily to help with cholesterol management. Their LDL was 130 mg/dL and triglycerides were 140 mg/dL, prompting their doctor to prescribe a low-dose statin. Their cholesterol numbers have been improving without any reported side effects.",
+            "26": "User takes a daily multivitamin, omega-3 supplements for heart health, and probiotics for digestion. Since their gallbladder was removed a few years ago, they sometimes take digestive enzymes when eating heavier foods, as losing their gallbladder changed the way they digest fatty foods.",
+            "27": "User monitors potential medication interactions, particularly between losartan and meloxicam, as NSAIDs can affect kidney function. They try not to take meloxicam too often. User also ensures to take their thyroid medication separately from calcium and iron supplements to avoid absorption interference.",
+            "28": "User feels their medication routine is working well and stays organized with a pill planner and phone reminders. They focus on lifestyle changes to avoid relying solely on medications, aiming to stay healthy and manage conditions naturally when possible."
         }
     }
 }

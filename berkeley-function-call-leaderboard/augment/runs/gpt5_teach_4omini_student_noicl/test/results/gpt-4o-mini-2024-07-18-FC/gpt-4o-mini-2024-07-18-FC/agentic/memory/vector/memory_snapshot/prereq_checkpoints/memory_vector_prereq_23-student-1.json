@@ -1,0 +1,55 @@
+{
+    "core_memory": {
+        "next_id": 15,
+        "store": {
+            "8": "User goes to the gym regularly, trying to hit it around four times a week. They started lifting in freshman year and focus on incremental improvements.",
+            "9": "User enjoys gaming, particularly co-op survival games and fast-paced shooters. They have dabbled in game development using Unity and Unreal Engine.",
+            "10": "User enjoys reading, particularly fantasy and sci-fi novels. They are currently interested in sci-fi that deals with artificial intelligence.",
+            "11": "User schedules their hobbies to maintain a healthy balance, planning activities based on the weather and available time.",
+            "12": "User enjoys combining hobbies, such as sailing and playing video games, and finds parallels between the two in terms of teamwork and problem-solving.",
+            "13": "User finds ways to engage in their hobbies despite a busy schedule, often in small increments.",
+            "14": "User values their hobbies for providing diverse topics to discuss outside of coding."
+        }
+    },
+    "archival_memory": {
+        "next_id": 36,
+        "store": {
+            "0": "User does undergrad research hours in a lab focusing on data visualization for big scientific datasets, which adds to their workload.",
+            "1": "User does undergrad research hours in a lab focusing on data visualization for big scientific datasets, which adds to their workload.",
+            "2": "User does undergrad research hours in a lab focusing on data visualization for big scientific datasets, which adds to their workload.",
+            "3": "User does undergrad research hours in a lab focusing on data visualization for big scientific datasets.",
+            "4": "User does undergrad research hours in a lab focusing on data visualization.",
+            "5": "User does undergrad research hours in a lab.",
+            "6": "User does undergrad research hours.",
+            "7": "User does research hours.",
+            "8": "User appreciates the opportunity to invest in academic projects without the pressures of a job environment.",
+            "9": "User appreciates the opportunity to invest in academic projects without the pressures of a job environment.",
+            "10": "User appreciates the opportunity to invest in academic projects without the pressures of a job environment.",
+            "11": "User appreciates the opportunity to invest in academic projects.",
+            "12": "User appreciates the opportunity to invest in academic projects.",
+            "13": "User appreciates the opportunity to invest in academic projects.",
+            "14": "User believes their classes are tough but rewarding, and they feel that everything they are doing is building toward their future career.",
+            "15": "User believes their classes are tough but rewarding, and they feel that everything they are doing is building toward their future career.",
+            "16": "User believes their classes are tough but rewarding.",
+            "17": "User believes their classes are tough but rewarding.",
+            "18": "User believes their classes are tough but rewarding.",
+            "19": "User enjoys tinkering with code but acknowledges the need for breaks and cannot be stuck behind their laptop 24/7.",
+            "20": "User's primary hobby is sailing, which they find unique among their friends. They grew up near a marina and were introduced to sailing by their dad on tiny sailboats. They try to keep up with sailing during breaks by renting boats from a local sailing club at a student rate. User loves the sense of freedom sailing provides, as it allows them to escape from deadlines and project stress. They enjoy the challenge of navigating unpredictable conditions, likening it to a grand-scale puzzle that appeals to their problem-solving nature.",
+            "21": "User's primary hobby is sailing, which they find unique among their friends. They grew up near a marina and were introduced to sailing by their dad on tiny sailboats. They try to keep up with sailing during breaks by renting boats from a local sailing club at a student rate. User loves the sense of freedom sailing provides, as it allows them to escape from deadlines and project stress. They enjoy the challenge of navigating unpredictable conditions, likening it to a grand-scale puzzle that appeals to their problem-solving nature.",
+            "22": "User is passionate about going to the gym regularly. They started a basic lifting routine in freshman year, learning proper form and workout programming from a friend. User tries to hit the gym around four times a week, focusing on incremental improvements rather than bodybuilding. They find that lifting more weight or having more energy is a win. Gym sessions serve as a great stress-reliever after coding marathons, providing mental clarity that boosts productivity and improves sleep.",
+            "23": "User is passionate about going to the gym regularly. They started a basic lifting routine in freshman year, learning proper form and workout programming from a friend. User tries to hit the gym around four times a week, focusing on incremental improvements rather than bodybuilding. They find that lifting more weight or having more energy is a win. Gym sessions serve as a great stress-reliever after coding marathons, providing mental clarity that boosts productivity and improves sleep.",
+            "24": "User is a big fan of both PC and console games, spending more time on PC due to their major. They enjoy co-op survival games that involve gathering resources and building shelters, as it allows for problem-solving in a more relaxed environment. User also plays fast-paced shooters with friends for social interaction and mental challenge. They believe gaming can be strategic and collaborative, serving as a way to stay connected. User has dabbled in game development using Unity and Unreal Engine and wants to explore it more deeply if time permits.",
+            "25": "User is a big fan of both PC and console games, spending more time on PC due to their major. They enjoy co-op survival games that involve gathering resources and building shelters, as it allows for problem-solving in a more relaxed environment. User also plays fast-paced shooters with friends for social interaction and mental challenge. They believe gaming can be strategic and collaborative, serving as a way to stay connected. User has dabbled in game development using Unity and Unreal Engine and wants to explore it more deeply if time permits.",
+            "26": "User has been passionate about reading since childhood, influenced by their mom, who is a literature buff. They enjoy fantasy and sci-fi novels, often sneaking in reading before bed or on weekends. Recently, they have been obsessed with sci-fi that deals with artificial intelligence, which aligns with their academic interests. Their favorite AI-themed book is 'The Infinity Courts' by Akemi Dawn Bowman. User finds that reading helps them consider the ethical and social implications of their studies, making it a source of relaxation and philosophical exploration.",
+            "27": "User has been passionate about reading since childhood, influenced by their mom, who is a literature buff. They enjoy fantasy and sci-fi novels, often sneaking in reading before bed or on weekends. Recently, they have been obsessed with sci-fi that deals with artificial intelligence, which aligns with their academic interests. Their favorite AI-themed book is 'The Infinity Courts' by Akemi Dawn Bowman. User finds that reading helps them consider the ethical and social implications of their studies, making it a source of relaxation and philosophical exploration.",
+            "28": "User balances their hobbies by scheduling them, similar to how they schedule study time. Every Sunday, they plan their week based on the weather, deciding whether to go to the gym, rent a dinghy at the local lake, or have an indoor day with friends playing co-op games or working out in their apartment's fitness center. They find reading easy to fit in, dedicating 30 minutes before bedtime to wind down.",
+            "29": "User balances their hobbies by scheduling them, similar to how they schedule study time. Every Sunday, they plan their week based on the weather, deciding whether to go to the gym, rent a dinghy at the local lake, or have an indoor day with friends playing co-op games or working out in their apartment's fitness center. They find reading easy to fit in, dedicating 30 minutes before bedtime to wind down.",
+            "30": "User sometimes combines hobbies, such as spending a day sailing at the lake followed by playing video games. They enjoy discussing how the experience on the water parallels coordinating movement in online co-op games, emphasizing the importance of teamwork, attention to detail, and problem-solving in both activities.",
+            "31": "User sometimes combines hobbies, such as spending a day sailing at the lake followed by playing video games. They enjoy discussing how the experience on the water parallels coordinating movement in online co-op games, emphasizing the importance of teamwork, attention to detail, and problem-solving in both activities.",
+            "32": "User acknowledges that their schedule can be stressful due to lectures, labs, homework, research group meetings, and a part-time gig tutoring intro-level CS courses. However, they believe that passion for hobbies allows them to find time for them, even in small increments. They mention that while they may not be able to read for hours, they can read a chapter, sail once a month, or fit in a quick gaming match if they have 30 minutes to spare.",
+            "33": "User acknowledges that their schedule can be stressful due to lectures, labs, homework, research group meetings, and a part-time gig tutoring intro-level CS courses. However, they believe that passion for hobbies allows them to find time for them, even in small increments. They mention that while they may not be able to read for hours, they can read a chapter, sail once a month, or fit in a quick gaming match if they have 30 minutes to spare.",
+            "34": "User appreciates that their hobbies provide topics to discuss outside of coding. They enjoy discussing data structures and algorithms but value having unique interests that showcase different sides of themselves. Their hobbies range from the calm of reading to the thrill of sailing, the discipline of weightlifting, and the adrenaline rush of co-op gaming, making life interesting.",
+            "35": "User appreciates that their hobbies provide topics to discuss outside of coding. They enjoy discussing data structures and algorithms but value having unique interests that showcase different sides of themselves. Their hobbies range from the calm of reading to the thrill of sailing, the discipline of weightlifting, and the adrenaline rush of co-op gaming, making life interesting."
+        }
+    }
+}

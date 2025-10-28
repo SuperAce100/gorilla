@@ -1,0 +1,25 @@
+{
+    "core_memory": {
+        "team_meeting_overrun": "Team meeting ran over by 30 minutes.",
+        "it_security_protocols_update": "Change passwords ASAP due to updated security protocols.",
+        "client_call_delay": "Client call with Jacob delayed till Wednesday."
+    },
+    "archival_memory": {
+        "team_meeting_overrun": "Team meeting ran over by 30 minutes.",
+        "it_security_protocols_update": "Change passwords ASAP due to updated security protocols.",
+        "client_call_delay": "Client call with Jacob delayed till Wednesday.",
+        "client_call_jacob_delay": "Client call with Jacob delayed till Wednesday.",
+        "tax_documents_submission_deadline": "Submit tax documents before Friday.",
+        "credit_card_statement_review": "Review credit card statement for errors.",
+        "auto_repair_shop_call": "Call auto repair shop about weird noise in the engine.",
+        "quarterly_budget_finalization": "Finalize quarterly budget.",
+        "vendor_contract_review": "Review vendor contract before signing.",
+        "security_compliance_training": "Finish security compliance training module.",
+        "laptop_files_backup": "Back up laptop files.",
+        "phone_software_update": "Update phone software.",
+        "cancel_unused_subscriptions": "Cancel unused subscriptions.",
+        "dentist_appointment_schedule": "Schedule dentist appointment.",
+        "gym_schedule": "Stick to gym 3x this week.",
+        "call_mom": "Call mom\u2014it\u2019s been a while."
+    }
+}

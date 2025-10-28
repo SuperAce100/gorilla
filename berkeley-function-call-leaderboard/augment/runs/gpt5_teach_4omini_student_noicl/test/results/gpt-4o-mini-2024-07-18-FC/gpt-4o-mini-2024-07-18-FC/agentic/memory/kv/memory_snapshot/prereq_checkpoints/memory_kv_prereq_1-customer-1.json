@@ -1,0 +1,42 @@
+{
+    "core_memory": {
+        "user_name": "Michael"
+    },
+    "archival_memory": {
+        "user_age": "35",
+        "user_location": "Seattle",
+        "user_profession": "freelance graphic designer",
+        "user_interests": "gadgets and appliances, morning routine, coffee machines",
+        "user_coffee_machine_preferences": "espresso machines, caf\u00e9-like experience, sleek modern design, stainless-steel finish",
+        "user_coffee_machine_experience_level": "not a professional barista",
+        "user_interest_in_pricing": "espresso machines, discounts, promotional offers, bundle deals",
+        "user_first_time_buyer": "yes",
+        "user_shipping_location": "Seattle",
+        "user_event_timing": "small family gathering later this month",
+        "user_friend_reference": "friend bought kitchen appliance, praised customer support",
+        "user_coffee_love": "big coffee lover",
+        "user_kitchen_space_concern": "counter space for espresso machine, may need to rearrange appliances",
+        "user_interest_in_warranty": "coffee machines, warranty policy, quality guarantee",
+        "user_coffee_temperature_preference": "reliably hot coffee, adjustable temperature settings",
+        "espresso_machine_preference": "Interested in ordering an espresso machine instead of a standard drip coffee maker.",
+        "design_interest": "Drawn to sleeker, modern espresso machine models.",
+        "kitchen_aesthetic": "Looking for a stainless-steel finish to match kitchen.",
+        "espresso_machine_model_interest": "Interested in a model with a steam wand for frothing milk.",
+        "beverage_preferences": "Enjoy making strawberry matcha lattes and cappuccinos.",
+        "hosting_interest": "Excited about hosting friends and family with coffeehouse-style beverages.",
+        "counter_space": "Counter space is 38 square feet, may need to move toaster oven.",
+        "first_time_purchasing": "This is Michael's first time going through the purchasing process on the website.",
+        "payment_method_preference": "Generally uses a credit card for online purchases.",
+        "interest_in_financing": "Curious about financing options for pricier items.",
+        "shipping_concerns": "Aware of potential shipping delays in Seattle due to weather; wants the espresso machine for a family gathering at the end of the month.",
+        "shipping_fee_interest": "Curious about expedited delivery fees and free shipping thresholds.",
+        "accessory_interest": "Considering adding accessories like extra filters or a stainless-steel frothing pitcher.",
+        "order_tracking_interest": "Wants to track orders in real time to plan around delivery.",
+        "return_policy_interest": "Wants to know the return/exchange process and shipping costs for returns.",
+        "concerns_about_returns": "Cautious about return policies due to past experiences.",
+        "interest_in_coffee_grinder": "Considering purchasing a coffee grinder for fresh beans.",
+        "coffee_purist_influence": "Friend insists on grinding fresh beans before brewing.",
+        "interest_in_coffee_beans": "Looking for recommendations on coffee beans.",
+        "appreciation_for_support": "Michael appreciates responsive and detailed customer support."
+    }
+}

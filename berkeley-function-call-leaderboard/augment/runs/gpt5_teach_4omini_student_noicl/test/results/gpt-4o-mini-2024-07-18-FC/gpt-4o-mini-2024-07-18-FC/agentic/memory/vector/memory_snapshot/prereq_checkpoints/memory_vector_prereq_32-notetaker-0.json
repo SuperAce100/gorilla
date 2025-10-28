@@ -1,0 +1,14 @@
+{
+    "core_memory": {
+        "next_id": 3,
+        "store": {
+            "0": "Wrapped up pending reports, but still waiting for final approval.",
+            "1": "Followed up with vendors\u2014two responded, one still pending.",
+            "2": "Training session next Monday\u2014prep materials this weekend."
+        }
+    },
+    "archival_memory": {
+        "next_id": 0,
+        "store": {}
+    }
+}
