@@ -70,9 +70,6 @@ def _gather_examples_for_entry(
     run_dir: Path,
     model_result_dir: Path,
 ) -> List[Tuple[str, str]]:
-    # If k <= 0, user requested no ICL; skip reading any pools or indices.
-    if k <= 0:
-        return []
     # Load pool map id -> answer_text
     pool_path = run_dir / "train" / "success_pool.jsonl"
     id_to_ans = {}
