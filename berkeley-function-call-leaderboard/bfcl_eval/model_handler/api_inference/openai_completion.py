@@ -79,10 +79,7 @@ class OpenAICompletionsHandler(BaseHandler):
     def _query_FC(self, inference_data: dict):
         message: list[dict] = inference_data["message"]
         tools = inference_data["tools"]
-        inference_data["inference_input_log"] = {
-            "message": repr(message),
-            "tools": tools,
-        }
+        inference_data["inference_input_log"] = {"message": repr(message), "tools": tools}
 
         kwargs = {
             "messages": message,
@@ -93,8 +90,6 @@ class OpenAICompletionsHandler(BaseHandler):
 
         if len(tools) > 0:
             kwargs["tools"] = tools
-            # Allow the model to choose when to call tools for FC flows
-            kwargs["tool_choice"] = "auto"
 
         return self.generate_with_backoff(**kwargs)
 
@@ -205,9 +200,7 @@ class OpenAICompletionsHandler(BaseHandler):
                     for tool_call in message.tool_calls
                 ],
             }
-            response_data["model_responses_message_for_chat_history"] = (
-                assistant_message
-            )
+            response_data["model_responses_message_for_chat_history"] = assistant_message
 
         # If no tool_calls, we still need to strip reasoning_content.
         elif hasattr(message, "reasoning_content"):
@@ -223,9 +216,7 @@ class OpenAICompletionsHandler(BaseHandler):
     #### Prompting methods ####
 
     def _query_prompting(self, inference_data: dict):
-        inference_data["inference_input_log"] = {
-            "message": repr(inference_data["message"])
-        }
+        inference_data["inference_input_log"] = {"message": repr(inference_data["message"])}
 
         return self.generate_with_backoff(
             messages=inference_data["message"],
@@ -273,10 +264,7 @@ class OpenAICompletionsHandler(BaseHandler):
         return inference_data
 
     def _add_execution_results_prompting(
-        self,
-        inference_data: dict,
-        execution_results: list[str],
-        model_response_data: dict,
+        self, inference_data: dict, execution_results: list[str], model_response_data: dict
     ) -> dict:
         formatted_results_message = format_execution_results_prompting(
             inference_data, execution_results, model_response_data

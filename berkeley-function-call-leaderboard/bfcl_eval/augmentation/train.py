@@ -2,8 +2,6 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass
-import os
-import multiprocessing as mp
 from pathlib import Path
 from typing import List
 
@@ -72,15 +70,6 @@ def run_train(cfg: TrainConfig) -> None:
     # Generate results only for train IDs per subcategory
     # We'll reuse collect_test_cases then filter by ids
     from types import SimpleNamespace
-
-    # Stabilize threading/multiprocessing for tokenizers/BLAS
-    os.environ["TOKENIZERS_PARALLELISM"] = "false"
-    os.environ["OMP_NUM_THREADS"] = "1"
-    os.environ["MKL_NUM_THREADS"] = "1"
-    try:
-        mp.set_start_method("spawn", force=True)
-    except RuntimeError:
-        pass
 
     args = SimpleNamespace(
         model=[cfg.model_train],

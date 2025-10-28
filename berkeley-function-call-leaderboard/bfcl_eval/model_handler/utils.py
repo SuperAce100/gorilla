@@ -58,9 +58,7 @@ def _cast_to_openai_type(properties, mapping):
                     properties[key]["properties"], mapping
                 )
             elif "items" in properties[key]:
-                properties[key]["items"]["type"] = mapping[
-                    properties[key]["items"]["type"]
-                ]
+                properties[key]["items"]["type"] = mapping[properties[key]["items"]["type"]]
                 if (
                     properties[key]["items"]["type"] == "array"
                     and "items" in properties[key]["items"]
@@ -134,27 +132,25 @@ def convert_to_tool(functions, mapping, model_style):
                     del params["required"]
                 # No `maximum` field.
                 if "maximum" in params:
-                    params["description"] += (
-                        f" Maximum value: {str(params['maximum'])}."
-                    )
+                    params["description"] += f" Maximum value: {str(params['maximum'])}."
                     del params["maximum"]
                 # No `minItems` field.
                 if "minItems" in params:
-                    params["description"] += (
-                        f" Minimum number of items: {str(params['minItems'])}."
-                    )
+                    params[
+                        "description"
+                    ] += f" Minimum number of items: {str(params['minItems'])}."
                     del params["minItems"]
                 # No `maxItems` field.
                 if "maxItems" in params:
-                    params["description"] += (
-                        f" Maximum number of items: {str(params['maxItems'])}."
-                    )
+                    params[
+                        "description"
+                    ] += f" Maximum number of items: {str(params['maxItems'])}."
                     del params["maxItems"]
                 # No `additionalProperties` field.
                 if "additionalProperties" in params:
-                    params["description"] += (
-                        f" Additional properties: {str(params['additionalProperties'])}."
-                    )
+                    params[
+                        "description"
+                    ] += f" Additional properties: {str(params['additionalProperties'])}."
                     del params["additionalProperties"]
                 # For Gemini, only `enum` field when the type is `string`.
                 # For Palmyra, `enum` field is not supported.
@@ -179,9 +175,9 @@ def convert_to_tool(functions, mapping, model_style):
                 ModelStyle.AMAZON,
                 ModelStyle.NOVITA_AI,
             ]:
-                item["description"] += (
-                    f" The response field has the following schema: {json.dumps(item['response'])}"
-                )
+                item[
+                    "description"
+                ] += f" The response field has the following schema: {json.dumps(item['response'])}"
                 del item["response"]
 
         if model_style in [
@@ -191,18 +187,12 @@ def convert_to_tool(functions, mapping, model_style):
         ]:
             oai_tool.append(item)
         elif model_style in [ModelStyle.OPENAI_RESPONSES]:
-            # Be maximally compatible: provide both top-level name and nested function block
             oai_tool.append(
                 {
                     "type": "function",
                     "name": item["name"],
-                    "description": item.get("description", ""),
+                    "description": item["description"],
                     "parameters": item["parameters"],
-                    "function": {
-                        "name": item["name"],
-                        "description": item.get("description", ""),
-                        "parameters": item["parameters"],
-                    },
                 }
             )
         elif model_style in [
@@ -230,7 +220,7 @@ def convert_to_function_call(function_call_list):
             if type(value) == str:
                 value = json.loads(value)
             execution_list.append(
-                f"{key}({','.join([f'{k}={repr(v)}' for k, v in value.items()])})"
+                f"{key}({','.join([f'{k}={repr(v)}' for k,v in value.items()])})"
             )
 
     return execution_list
@@ -455,9 +445,7 @@ def extract_system_prompt(prompts: list[dict]) -> str:
     return None
 
 
-def extract_last_user_message(
-    prompts: list[dict], user_role_name: str = "user"
-) -> dict:
+def extract_last_user_message(prompts: list[dict], user_role_name: str = "user") -> dict:
     for i in range(len(prompts) - 1, -1, -1):
         if prompts[i]["role"] == user_role_name:
             last_user_message = prompts[i]
@@ -478,11 +466,7 @@ def format_execution_results_prompting(
         execution_results, model_response_data["model_responses_decoded"]
     ):
         tool_results.append(
-            {
-                "role": "tool",
-                "name": decoded_model_response,
-                "content": execution_result,
-            }
+            {"role": "tool", "name": decoded_model_response, "content": execution_result}
         )
 
     return repr(tool_results)
@@ -532,9 +516,7 @@ def parse_nested_value(value):
         if all(isinstance(v, dict) for v in value.values()):
             func_name = list(value.keys())[0]
             args = value[func_name]
-            args_str = ", ".join(
-                f"{k}={parse_nested_value(v)}" for k, v in args.items()
-            )
+            args_str = ", ".join(f"{k}={parse_nested_value(v)}" for k, v in args.items())
             return f"{func_name}({args_str})"
         else:
             # If it's a simple dictionary, treat it as key-value pairs
@@ -559,9 +541,7 @@ def decoded_output_to_execution_list(decoded_output: list[dict]) -> list[str]:
     execution_list = []
     for function_call in decoded_output:
         for key, value in function_call.items():
-            args_str = ", ".join(
-                f"{k}={parse_nested_value(v)}" for k, v in value.items()
-            )
+            args_str = ", ".join(f"{k}={parse_nested_value(v)}" for k, v in value.items())
             execution_list.append(f"{key}({args_str})")
     return execution_list
 
@@ -679,9 +659,7 @@ def add_memory_instruction_system_prompt(
 #### Utils for Format Sensitivity ####
 
 
-def formulate_system_prompt(
-    format_sensitivity_config: str, functions: list[dict]
-) -> str:
+def formulate_system_prompt(format_sensitivity_config: str, functions: list[dict]) -> str:
     """
     Formulate the default system prompt based on the provided parameters.
     """

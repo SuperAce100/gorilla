@@ -120,8 +120,6 @@ class OpenAIResponsesHandler(BaseHandler):
 
         if len(tools) > 0:
             kwargs["tools"] = tools
-            # Allow the model to choose when to call tools for FC flows
-            kwargs["tool_choice"] = "auto"
 
         return self.generate_with_backoff(**kwargs)
 
@@ -215,9 +213,7 @@ class OpenAIResponsesHandler(BaseHandler):
     #### Prompting methods ####
 
     def _query_prompting(self, inference_data: dict):
-        inference_data["inference_input_log"] = {
-            "message": repr(inference_data["message"])
-        }
+        inference_data["inference_input_log"] = {"message": repr(inference_data["message"])}
 
         kwargs = {
             "input": inference_data["message"],

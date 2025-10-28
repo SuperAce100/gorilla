@@ -2,11 +2,8 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass
-import os
-import multiprocessing as mp
 from pathlib import Path
 from typing import List, Tuple
-from copy import deepcopy
 
 import numpy as np
 
@@ -152,35 +149,18 @@ def run_test(cfg: TestConfig) -> None:
     test_result_dir.mkdir(parents=True, exist_ok=True)
     test_score_dir.mkdir(parents=True, exist_ok=True)
 
-    # Load test entries and their prerequisite chains, augment non-prereq entries with examples, then run generation
+    # Load test entries only, augment with examples, then run generation
     augmented_entries: List[dict] = []
     for subcat in subcategories:
-        # Load with prereqs included so dependency chain is available for generation
-        entries_full = load_dataset_entry(
-            subcat, include_prereq=True, include_language_specific_hint=True
-        )
-        id_to_entry = {e["id"]: e for e in entries_full}
-
-        # Compute dependency closure starting from test IDs
         test_ids = set(split_obj["ids_by_subcategory"][subcat]["test"])  # type: ignore
-        selected_ids = set(test_ids)
-        queue: List[str] = list(test_ids)
-        while queue:
-            tid = queue.pop()
-            deps = id_to_entry.get(tid, {}).get("depends_on", [])
-            for dep_id in deps:
-                if dep_id not in selected_ids:
-                    selected_ids.add(dep_id)
-                    queue.append(dep_id)
-
-        # Prepare entries; do NOT inject few-shots into prereq entries
-        for eid in sorted(selected_ids):
-            base_entry = deepcopy(id_to_entry[eid])
-            is_prereq = "prereq" in base_entry["id"]
-            # Inject few-shots for non-prereq entries when index is available
-            if (not is_prereq) and index is not None and keys:
+        entries = load_dataset_entry(
+            subcat, include_prereq=False, include_language_specific_hint=True
+        )
+        entries = [e for e in entries if e["id"] in test_ids]
+        for e in entries:
+            if index is not None and keys:
                 exs = _gather_examples_for_entry(
-                    entry=base_entry,
+                    entry=e,
                     k=cfg.k,
                     scope=cfg.retrieval_scope,
                     index=index,
@@ -190,22 +170,11 @@ def run_test(cfg: TestConfig) -> None:
                 )
             else:
                 exs = []
-            e_aug = (
-                inject_few_shots(entry=base_entry, examples=exs) if exs else base_entry
-            )
+            e_aug = inject_few_shots(entry=e, examples=exs)
             augmented_entries.append(e_aug)
 
     # Run generation
     from types import SimpleNamespace
-
-    # Stabilize threading/multiprocessing for tokenizers/BLAS
-    os.environ["TOKENIZERS_PARALLELISM"] = "false"
-    os.environ["OMP_NUM_THREADS"] = "1"
-    os.environ["MKL_NUM_THREADS"] = "1"
-    try:
-        mp.set_start_method("spawn", force=True)
-    except RuntimeError:
-        pass
 
     args = SimpleNamespace(
         model=[cfg.model_eval],
