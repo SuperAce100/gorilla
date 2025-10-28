@@ -1,0 +1,47 @@
+{
+    "core_memory": {
+        "next_id": 6,
+        "store": {
+            "0": "Schedule dentist appointment.",
+            "1": "Stick to gym 3x this week.",
+            "2": "Call mom\u2014it\u2019s been a while.",
+            "3": "Wash dishes tonight before it piles up.",
+            "4": "Take out trash Wednesday morning.",
+            "5": "Wash and vacuum car on Sunday."
+        }
+    },
+    "archival_memory": {
+        "next_id": 29,
+        "store": {
+            "0": "Vitamin D3\u20141000 IU daily.",
+            "1": "Omega-3s\u2014good for joints.",
+            "2": "Iron levels were low last check-up\u2014remember to take supplements.",
+            "3": "Probiotics\u2014help with digestion, take in the morning.",
+            "4": "Separate laundry colors, don\u2019t mix whites.",
+            "5": "Fix leaky sink in the kitchen\u2014YouTube how-to if needed.",
+            "6": "Vacuum living room.",
+            "7": "Mop the kitchen floor\u2014sticky from last night\u2019s spill.",
+            "8": "Check tire pressure.",
+            "9": "Refill windshield wiper fluid.",
+            "10": "Sort through closet\u2014donate old clothes.",
+            "11": "Shred old mail.",
+            "12": "Restock pantry\u2014running low on rice and cereal.",
+            "13": "Tighten loose cabinet handle.",
+            "14": "Replace bathroom lightbulb.",
+            "15": "Patch up minor wall scuffs.",
+            "16": "Daycare: Drop-off at 8 AM, pick-up at 5 PM. Monthly payment due Friday. Bring extra set of clothes\u2014last set got muddy.",
+            "17": "Elementary school: Finalize admission paperwork.",
+            "18": "Attend orientation next Thursday.",
+            "19": "Research after-school programs.",
+            "20": "Schedule pediatrician visit for kid's cold.",
+            "21": "Check vaccine schedule\u2014next shots due in two months.",
+            "22": "Monitor food allergies\u2014keep a log if symptoms flare up.",
+            "23": "Take kid to park this weekend.",
+            "24": "Pick out a new bedtime story book.",
+            "25": "Help with counting practice\u2014focus on numbers 1-20.",
+            "26": "Buy more diapers.",
+            "27": "Get school supplies\u2014crayons, notebooks, glue sticks.",
+            "28": "Pack extra snacks in daycare bag."
+        }
+    }
+}

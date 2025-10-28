@@ -1,0 +1,24 @@
+{
+    "core_memory": {
+        "next_id": 2,
+        "store": {
+            "0": "User is cautious about medication interactions, particularly with losartan and meloxicam due to potential kidney function effects. They take their thyroid medication separately from calcium and iron supplements to avoid absorption issues.",
+            "1": "User believes their medication routine is effective and uses a pill planner and phone reminders to stay organized. They focus on lifestyle changes to manage their health naturally and avoid unnecessary prescriptions."
+        }
+    },
+    "archival_memory": {
+        "next_id": 10,
+        "store": {
+            "0": "User has Type 2 Diabetes and has been taking metformin 1000 mg twice daily for several years. Their A1C is around 6.9%. Their doctor suggested adding semaglutide(Ozempic) at a low dose, which helps control their appetite. User checks their fasting blood sugar regularly, which usually stays between 125-130 mg/dL.",
+            "1": "User takes losartan 50 mg once daily for high blood pressure, keeping readings mostly in the 135-140/80-90 mmHg range. Their doctor suggests stress management and reducing sodium intake instead of increasing the dosage. User also takes a daily magnesium supplement to help with blood pressure regulation.",
+            "2": "User has hypothyroidism and takes levothyroxine 75 mcg every morning on an empty stomach, waiting at least 30 minutes before eating. Their last TSH test was 2.1 mIU/L, which is within the normal range, so their doctor hasn't changed the dosage in years. User feels sluggish if they miss a dose and uses a pill organizer to stay on track.",
+            "3": "User has osteoarthritis and takes acetaminophen as needed for mild pain. For more severe joint pain, their doctor prescribed meloxicam 7.5 mg, which they don't take daily to avoid overdoing it on NSAIDs. User finds meloxicam helpful for stiffness in their knees and hands. Their doctor suggested trying glucosamine supplements, but they are unsure of their effectiveness.",
+            "4": "User's last blood test showed low vitamin D levels at 22 ng/mL, so they now take vitamin D3 2,000 IU daily. They also take calcium supplements due to early signs of osteopenia from their last bone density scan. Their doctor recommended combining calcium with vitamin K2 to help with absorption.",
+            "5": "User takes atorvastatin 10 mg daily to help with cholesterol management. Their LDL was 130 mg/dL and triglycerides were 140 mg/dL, prompting their doctor to prescribe a low-dose statin. User's cholesterol numbers have been improving, and they haven't experienced any side effects.",
+            "6": "User takes a daily multivitamin, omega-3 supplements for heart health, and probiotics for digestion. Since their gallbladder was removed a few years ago, they sometimes take digestive enzymes when eating heavier foods, as losing their gallbladder changed the way they digest fatty foods.",
+            "7": "User monitors potential medication interactions. They are cautious with meloxicam and losartan, as NSAIDs can affect kidney function, so they try not to take meloxicam too often. User also takes their thyroid medication separately from calcium and iron supplements to avoid absorption interference.",
+            "8": "User monitors potential medication interactions. They are cautious with meloxicam and losartan, as NSAIDs can affect kidney function, so they try not to take meloxicam too often. User also takes their thyroid medication separately from calcium and iron supplements to avoid absorption interference.",
+            "9": "User feels their medication routine is working well. They stay organized with a pill planner and use reminders on their phone. User focuses on lifestyle changes to avoid relying solely on medications, aiming to stay as healthy as possible and manage things naturally when they can."
+        }
+    }
+}

@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass
+import os
+import multiprocessing as mp
 from pathlib import Path
 from typing import List
 
@@ -41,8 +43,6 @@ class TrainConfig:
     tag: str
     model_train: str
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
-    # Number of concurrent examples to run (for API models). Defaults to serial when None.
-    num_threads: int | None = None
 
 
 def _ensure_openai_fc(model: str) -> None:
@@ -73,6 +73,15 @@ def run_train(cfg: TrainConfig) -> None:
     # We'll reuse collect_test_cases then filter by ids
     from types import SimpleNamespace
 
+    # Stabilize threading/multiprocessing for tokenizers/BLAS
+    os.environ["TOKENIZERS_PARALLELISM"] = "false"
+    os.environ["OMP_NUM_THREADS"] = "1"
+    os.environ["MKL_NUM_THREADS"] = "1"
+    try:
+        mp.set_start_method("spawn", force=True)
+    except RuntimeError:
+        pass
+
     args = SimpleNamespace(
         model=[cfg.model_train],
         test_category=["agentic"],
@@ -80,13 +89,13 @@ def run_train(cfg: TrainConfig) -> None:
         include_input_log=False,
         exclude_state_log=False,
         num_gpus=1,
-        num_threads=cfg.num_threads,
+        num_threads=None,
         gpu_memory_utilization=0.9,
         backend="sglang",
         skip_server_setup=True,
         local_model_path=None,
         result_dir=train_result_dir,
-        allow_overwrite=False,
+        allow_overwrite=True,
         run_ids=False,
     )
 

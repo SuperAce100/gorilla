@@ -93,8 +93,8 @@ class OpenAICompletionsHandler(BaseHandler):
 
         if len(tools) > 0:
             kwargs["tools"] = tools
-            # Encourage/require the model to use tools when provided for FC flows
-            kwargs["tool_choice"] = "required"
+            # Allow the model to choose when to call tools for FC flows
+            kwargs["tool_choice"] = "auto"
 
         return self.generate_with_backoff(**kwargs)
 

@@ -1,0 +1,37 @@
+{
+    "core_memory": {
+        "next_id": 33,
+        "store": {
+            "22": "User has received initial outreach from a few companies for chats, which feels surreal. They are trying to stay grounded, recognizing that a recruiter message is just the beginning of the hiring process. User is also exploring smaller companies or startups in their city or nearby tech hubs.",
+            "23": "User is exploring software engineering roles in data visualization, VR/AR technologies, and data-driven product development. They are interested in tech companies like Unity, Unreal, and startups in specialized VR solutions for healthcare or engineering.",
+            "25": "User is intrigued by pursuing graduate studies in immersive analytics or human-computer interaction for large datasets. They recognize that advanced degrees can lead to specialized R&D roles in industry labs or academia. User enjoys exploring topics through writing workshop papers.",
+            "26": "User's involvement in campus clubs and projects has shaped their view of the future. They thrive on teamwork and problem-solving in high-stakes scenarios, as demonstrated by their capstone project analyzing social media sentiment for emergency responses. User seeks a collaborative work environment.",
+            "30": "User is considering family factors in their job search, including the distance from their parents who live in a different state. They are open to relocating for tech opportunities but recognize the logistical challenges of visiting home.",
+            "31": "User wants to keep growing their skills and avoid complacency in their career. They aim to learn new frameworks, approaches to product development, and management skills, considering any role that offers learning opportunities a success.",
+            "32": "User is in their fourth year of Computer Science and feels a shift in mindset regarding future plans. They have moved from a casual approach to a more urgent need for a solid plan. User is leaning towards entering the industry for 5 years after graduation but hasn't ruled out grad school."
+        }
+    },
+    "archival_memory": {
+        "next_id": 18,
+        "store": {
+            "0": "User feels unspoken pressure to secure a full-time job in industry, a spot in a grad program, or a startup venture after graduation.",
+            "1": "User feels unspoken pressure to secure a full-time job in industry, a spot in a grad program, or a startup venture after graduation.",
+            "2": "User received advice from a lab mentor to 'Follow the domain that excites you, not just the biggest name brand out there.' They are considering the impact they could have at smaller companies compared to larger tech giants.",
+            "3": "User received advice from a lab mentor to 'Follow the domain that excites you, not just the biggest name brand out there.' They are considering the impact they could have at smaller companies compared to larger tech giants.",
+            "4": "User's internship experience included seeing how a real development team operates, planning sprints, managing code reviews, and handling feature rollouts to clients. They built small UI components for an analytics dashboard and wrote data pipelines for near real-time shipping event processing.",
+            "5": "User's internship experience included seeing how a real development team operates, planning sprints, managing code reviews, and handling feature rollouts to clients. They built small UI components for an analytics dashboard and wrote data pipelines for near real-time shipping event processing.",
+            "6": "User is considering the practical aspect of applying what they've learned in a commercial setting before committing to a PhD or master's program. They are weighing the options of pursuing a master's part-time while working versus going all-in for graduate studies.",
+            "7": "User is considering the practical aspect of applying what they've learned in a commercial setting before committing to a PhD or master's program. They are weighing the options of pursuing a master's part-time while working versus going all-in for graduate studies.",
+            "8": "User enjoys working closely with people, brainstorming solutions, prototyping, and iterating until they work. They want to avoid roles with siloed tasks and prefer companies that foster interdisciplinary collaboration with designers, data scientists, product managers, and domain experts.",
+            "9": "User enjoys working closely with people, brainstorming solutions, prototyping, and iterating until they work. They want to avoid roles with siloed tasks and prefer companies that foster interdisciplinary collaboration with designers, data scientists, product managers, and domain experts.",
+            "10": "User is aware that funding for grad school can be complicated, with some PhD programs offering stipends and others not, while master's programs often require tuition payment. They see a good job in industry as a way to alleviate financial strain and gain career momentum.",
+            "11": "User is aware that funding for grad school can be complicated, with some PhD programs offering stipends and others not, while master's programs often require tuition payment. They see a good job in industry as a way to alleviate financial strain and gain career momentum.",
+            "12": "User is taking advanced courses like Advanced Algorithms and Distributed Systems, which are boosting their confidence for technical interviews. They feel more comfortable discussing topics like concurrency, big-O notation, and analyzing architecture design trade-offs.",
+            "13": "User is drawn to the idea of joining a brand-new VR startup, potentially having a stake in its success and building a product from scratch, which appeals to their entrepreneurial side.",
+            "14": "User is aware of the challenges of maintaining a startup, especially without a guaranteed paycheck. Their parents support their ambitions but emphasize the importance of financial independence and the realities of living expenses.",
+            "15": "User is aware that remote or hybrid roles have changed the job landscape, allowing for the possibility of living near family or in a comfortable location while working for a big name or innovative startup.",
+            "16": "User plans to finish senior year strong, keep interviewing, and make a decision by late spring. They recognize the importance of flexibility and staying curious as they navigate their career path.",
+            "17": "User plans to finish senior year strong, keep interviewing, and make a decision by late spring. They recognize the importance of flexibility and staying curious as they navigate their career path."
+        }
+    }
+}

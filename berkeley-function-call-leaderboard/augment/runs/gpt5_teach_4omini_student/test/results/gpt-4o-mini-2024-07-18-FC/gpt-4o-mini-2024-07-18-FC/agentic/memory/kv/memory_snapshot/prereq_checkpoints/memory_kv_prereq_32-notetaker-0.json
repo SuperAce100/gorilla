@@ -1,0 +1,14 @@
+{
+    "core_memory": {
+        "team_meeting": "Ran over by 30 minutes.",
+        "it_security_protocols": "Change passwords ASAP.",
+        "client_call_jacob": "Delayed till Wednesday.",
+        "client_call_jacob_delayed": "Delayed till Wednesday."
+    },
+    "archival_memory": {
+        "client_call_jacob_delayed": "Delayed till Wednesday.",
+        "client_call_jacob": "Delayed till Wednesday.",
+        "client_call_jacob_delay": "Delayed till Wednesday.",
+        "client_call_jacob_rescheduled": "Delayed till Wednesday."
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "core_memory": {
+        "user_name": "Michael"
+    },
+    "archival_memory": {
+        "user_age": "35",
+        "user_location": "Seattle",
+        "user_profession": "freelance graphic designer",
+        "user_interests": "gadgets and appliances, morning routine, coffee machines",
+        "user_coffee_machine_preferences": "espresso machines, caf\u00e9-like experience, sleek modern design, stainless-steel finish",
+        "user_interest_pricing": "curious about pricing, interested in discounts and promotions, new customer discount",
+        "user_interest_bundle_deals": "interested in bundle deals and limited-time promotions",
+        "user_location_shipping": "Seattle, concerned about shipping and delivery times",
+        "user_event_timing": "hosting a family gathering later this month",
+        "user_friend_reference": "friend recently bought a kitchen appliance, praised customer support",
+        "user_coffee_love": "big coffee lover, wants to ensure the device matches routine, concerned about brewing frequency, cleaning complexity, and size of the machine",
+        "user_kitchen_space_concern": "concerned about kitchen counter space, willing to rearrange appliances for espresso machine",
+        "user_warranty_concern": "concerned about warranty and quality guarantee for coffee machines, previous experiences with short warranty periods",
+        "user_coffee_temperature_concern": "concerned about coffee temperature, prefers machines that produce reliably hot coffee or have adjustable temperature settings"
+    }
+}

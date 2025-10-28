@@ -1,0 +1,26 @@
+{
+    "core_memory": {
+        "vitamin_d3": "Vitamin D3\u20141000 IU daily.",
+        "omega_3s": "Omega-3s\u2014good for joints.",
+        "iron_supplements": "Iron levels were low last check-up\u2014remember to take supplements.",
+        "probiotics": "Probiotics\u2014help with digestion, take in the morning."
+    },
+    "archival_memory": {
+        "daycare_drop_off_time": "8 AM",
+        "daycare_pick_up_time": "5 PM",
+        "daycare_payment_due_day": "Friday",
+        "daycare_extra_clothes": "Bring extra set of clothes\u2014last set got muddy.",
+        "elementary_school_admission_paperwork": "Finalize admission paperwork.",
+        "elementary_school_orientation_date": "Next Thursday.",
+        "elementary_school_after_school_programs": "Research after-school programs.",
+        "doctor_schedule_visit": "Schedule pediatrician visit for kid's cold.",
+        "doctor_vaccine_schedule": "Check vaccine schedule\u2014next shots due in two months.",
+        "doctor_food_allergies_monitor": "Monitor food allergies\u2014keep a log if symptoms flare up.",
+        "family_time_park_visit": "Take kid to park this weekend.",
+        "family_time_bedtime_story_book": "Pick out a new bedtime story book.",
+        "family_time_counting_practice": "Help with counting practice\u2014focus on numbers 1-20.",
+        "shopping_diapers": "Buy more diapers.",
+        "shopping_school_supplies": "Get school supplies\u2014crayons, notebooks, glue sticks.",
+        "shopping_extra_snacks": "Pack extra snacks in daycare bag."
+    }
+}

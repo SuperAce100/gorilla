@@ -1,0 +1,24 @@
+{
+    "core_memory": {
+        "next_id": 2,
+        "store": {
+            "0": "User finds it challenging to keep up with doctor\u2019s appointments and medications due to multiple health conditions.",
+            "1": "User focuses on staying healthy and takes it one step at a time."
+        }
+    },
+    "archival_memory": {
+        "next_id": 10,
+        "store": {
+            "0": "User is in mid-50s, has experienced various health issues including surgeries, medications, and chronic conditions. Lives in Kansas and is cautious about joint pain and seasonal illnesses due to harsh winters. Feels managing health is like a part-time job now.",
+            "1": "User has Type 2 Diabetes, diagnosed about ten years ago. Initially struggled with diet and lifestyle changes, including cutting out sugary snacks and monitoring carb intake. User checks blood sugar levels regularly and finds that small habits, like a 30-minute walk after dinner, help keep glucose levels stable. User feels they have a good handle on managing diabetes with their doctor's guidance.",
+            "2": "User has hypertension, which runs in their family. They manage it with medication and lifestyle changes, including eating right and light exercise(walking and yoga). User has noticed that stress can worsen their hypertension. They adapt to Kansas weather by doing indoor workouts or using a treadmill during winter. A significant event was a dangerous spike in blood pressure a few years ago that led to an ER visit, which served as a wake-up call.",
+            "3": "User has osteoarthritis, primarily affecting their knees and hands. Symptoms vary, with worse pain during weather changes. Their doctor recommended physical therapy, which has been beneficial. User is trying different supplements like glucosamine but is unsure of their effectiveness. They have found that lifestyle changes, such as using ergonomic chairs, wearing good shoes, and avoiding overexertion on their joints, have been the most helpful.",
+            "4": "User has hypothyroidism, diagnosed in their early 40s after experiencing constant exhaustion and unexplained weight gain. Initially thought it was part of aging, but tests revealed thyroid levels were off. User has learned to be patient with the condition, as it took time to get the medication dosage right. They feel good as long as they stay on top of their meds and check in with their doctor regularly.",
+            "5": "User had gallbladder removal surgery a few years ago due to severe gallstones. They experienced unbearable pain in the upper abdomen, leading to the surgery. Recovery was manageable, but digestion has not been the same since. User has had to learn which foods to avoid, particularly fried and greasy foods.",
+            "6": "User has seasonal allergies that flare up every spring due to high pollen levels in Kansas. They had pneumonia a couple of years ago, which led to a prolonged recovery. Since then, they have been diligent about getting their flu shot and pneumonia vaccine, recognizing that small infections can become serious as they age.",
+            "7": "User finds it challenging to keep up with doctor\u2019s appointments and medications due to managing multiple conditions(diabetes, hypertension, arthritis). They see an endocrinologist for diabetes, a primary care doctor, and sometimes a specialist for arthritis. User keeps a notebook to track appointments, medication changes, and notes about their feelings, as they find it helpful. They also use online patient portals but prefer writing things down.",
+            "8": "User finds it challenging to keep up with doctor\u2019s appointments and medications due to managing multiple conditions(diabetes, hypertension, arthritis). They see an endocrinologist for diabetes, a primary care doctor, and sometimes a specialist for arthritis. User keeps a notebook to track appointments, medication changes, and notes about their feelings, as they find it helpful. They also use online patient portals but prefer writing things down.",
+            "9": "User is doing their best to stay healthy and has shifted their focus from worrying about aging to taking it one step at a time. They emphasize the importance of listening to their body\u2014taking rest when needed and not ignoring when something feels off. The biggest takeaway from their health journey is the need to be proactive in managing health."
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "core_memory": {},
+    "archival_memory": {
+        "patient_age": "mid-50s",
+        "health_history": "surgeries, medications, chronic conditions",
+        "location": "Kansas",
+        "seasonal_concerns": "joint pain, seasonal illnesses",
+        "diabetes_diagnosis": "Type 2 Diabetes, diagnosed about ten years ago",
+        "diabetes_management": "diet changes, cutting out sugary snacks, watching carb intake, increasing physical activity",
+        "blood_sugar_monitoring": "mindful about checking blood sugar levels",
+        "exercise_importance": "30-minute walk after dinner helps stabilize glucose levels",
+        "hypertension_management": "hypertension, managed with medication and lifestyle changes",
+        "family_history_hypertension": "hypertension runs in the family",
+        "stress_impact": "stress can worsen hypertension",
+        "exercise_for_hypertension": "light exercise, walking, yoga",
+        "osteoarthritis_management": "osteoarthritis affecting knees and hands",
+        "physical_therapy": "recommended by doctor, has helped a lot",
+        "supplements": "trying glucosamine, unsure of effectiveness",
+        "lifestyle_changes_osteoarthritis": "ergonomic chairs, good shoes, avoiding overuse of joints",
+        "hypothyroidism_management": "hypothyroidism diagnosed in early 40s, symptoms included exhaustion and weight gain",
+        "thyroid_treatment": "medication management, regular check-ins with doctor",
+        "gallbladder_surgery": "gallbladder removal due to severe gallbladder attack",
+        "gallstones_history": "dealt with gallstones for years before surgery",
+        "digestion_changes_post_surgery": "digestion has changed since surgery, need to avoid fried and greasy foods",
+        "seasonal_allergies": "seasonal allergies that flare up every spring in Kansas",
+        "pneumonia_history": "had pneumonia a couple of years ago, leading to diligence in vaccinations",
+        "doctor_appointments_management": "juggling multiple appointments with endocrinologist, primary care doctor, and arthritis specialist",
+        "tracking_system": "using a notebook to track appointments, medication changes, and notes about health",
+        "note_taking_preference": "prefers writing things down over using online patient portals",
+        "health_philosophy": "focus on staying healthy, taking it one step at a time, listening to the body",
+        "proactive_health_management": "importance of being proactive in managing health"
+    }
+}

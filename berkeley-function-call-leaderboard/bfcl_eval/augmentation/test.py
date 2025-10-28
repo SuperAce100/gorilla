@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass
+import os
+import multiprocessing as mp
 from pathlib import Path
 from typing import List, Tuple
 from copy import deepcopy
@@ -40,8 +42,6 @@ class TestConfig:
     retrieval_scope: str = "subcategory"  # or "agentic"
     k: int = 5
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
-    # Number of concurrent examples to run (for API models). Defaults to serial when None.
-    num_threads: int | None = None
 
 
 def _ensure_openai_fc(model: str) -> None:
@@ -177,7 +177,8 @@ def run_test(cfg: TestConfig) -> None:
         for eid in sorted(selected_ids):
             base_entry = deepcopy(id_to_entry[eid])
             is_prereq = "prereq" in base_entry["id"]
-            if not is_prereq and index is not None and keys:
+            # Inject few-shots for non-prereq entries when index is available
+            if (not is_prereq) and index is not None and keys:
                 exs = _gather_examples_for_entry(
                     entry=base_entry,
                     k=cfg.k,
@@ -197,6 +198,15 @@ def run_test(cfg: TestConfig) -> None:
     # Run generation
     from types import SimpleNamespace
 
+    # Stabilize threading/multiprocessing for tokenizers/BLAS
+    os.environ["TOKENIZERS_PARALLELISM"] = "false"
+    os.environ["OMP_NUM_THREADS"] = "1"
+    os.environ["MKL_NUM_THREADS"] = "1"
+    try:
+        mp.set_start_method("spawn", force=True)
+    except RuntimeError:
+        pass
+
     args = SimpleNamespace(
         model=[cfg.model_eval],
         test_category=subcategories,
@@ -204,7 +214,7 @@ def run_test(cfg: TestConfig) -> None:
         include_input_log=False,
         exclude_state_log=False,
         num_gpus=1,
-        num_threads=cfg.num_threads,
+        num_threads=None,
         gpu_memory_utilization=0.9,
         backend="sglang",
         skip_server_setup=True,

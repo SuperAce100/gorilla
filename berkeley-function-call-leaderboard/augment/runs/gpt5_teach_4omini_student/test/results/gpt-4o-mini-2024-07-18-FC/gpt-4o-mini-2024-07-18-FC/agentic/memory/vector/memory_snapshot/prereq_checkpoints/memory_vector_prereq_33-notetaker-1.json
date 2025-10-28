@@ -1,0 +1,19 @@
+{
+    "core_memory": {
+        "next_id": 3,
+        "store": {
+            "0": "Schedule dentist appointment.",
+            "1": "Stick to gym 3x this week.",
+            "2": "Call mom\u2014it\u2019s been a while."
+        }
+    },
+    "archival_memory": {
+        "next_id": 4,
+        "store": {
+            "0": "Vitamin D3\u20141000 IU daily.",
+            "1": "Omega-3s\u2014good for joints.",
+            "2": "Iron levels were low last check-up\u2014remember to take supplements.",
+            "3": "Probiotics\u2014help with digestion, take in the morning."
+        }
+    }
+}

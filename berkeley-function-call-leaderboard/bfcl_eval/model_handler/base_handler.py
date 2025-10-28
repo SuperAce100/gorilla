@@ -89,7 +89,9 @@ class BaseHandler:
                     test_entry, include_input_log, exclude_state_log
                 )
             else:
-                return self.inference_single_turn_prompting(test_entry, include_input_log)
+                return self.inference_single_turn_prompting(
+                    test_entry, include_input_log
+                )
 
     @final
     def inference_multi_turn_FC(
@@ -110,12 +112,12 @@ class BaseHandler:
         total_input_token_count: list[list[float]] = []
         total_output_token_count: list[list[float]] = []
         total_latency: list[list[float]] = []
-        all_model_response: list[list] = (
-            []
-        )  # The model response that will be used for later evaluation
-        all_inference_log: list[list[dict]] = (
-            []
-        )  # The debugging log for human to understand
+        all_model_response: list[
+            list
+        ] = []  # The model response that will be used for later evaluation
+        all_inference_log: list[
+            list[dict]
+        ] = []  # The debugging log for human to understand
         force_quit = False  # Whether the model has been forced to quit. If True, this whole entry will be failed.
 
         all_reasoning_content: list[list] = []
@@ -127,14 +129,16 @@ class BaseHandler:
             involved_classes,
             self.model_name_underline_replaced,
             test_entry_id,
-            long_context=("long_context" in test_category or "composite" in test_category),
+            long_context=(
+                "long_context" in test_category or "composite" in test_category
+            ),
             is_evaL_run=False,
         )
 
         if is_memory(test_category):
-            assert (
-                len(involved_instances) == 1
-            ), "Memory category should only involve one class."
+            assert len(involved_instances) == 1, (
+                "Memory category should only involve one class."
+            )
 
             memory_instance: "MemoryAPI" = list(involved_instances.values())[0]
             test_entry["question"] = add_memory_instruction_system_prompt(
@@ -147,7 +151,10 @@ class BaseHandler:
         if not exclude_state_log:
             state_log = []
             for class_name, class_instance in involved_instances.items():
-                if class_name in STATELESS_CLASSES or class_name in OMIT_STATE_INFO_CLASSES:
+                if (
+                    class_name in STATELESS_CLASSES
+                    or class_name in OMIT_STATE_INFO_CLASSES
+                ):
                     continue
                 # Avoid modification in future turns
                 class_instance = deepcopy(class_instance)
@@ -177,9 +184,9 @@ class BaseHandler:
                 test_entry["function"].extend(holdout_function[str(turn_idx)])
                 # Since we have added new functions, we need to recompile the tools
                 inference_data = self._compile_tools(inference_data, test_entry)
-                assert (
-                    len(current_turn_message) == 0
-                ), "Holdout turn should not have user message."
+                assert len(current_turn_message) == 0, (
+                    "Holdout turn should not have user message."
+                )
                 # TODO: Move this to before pre_query_processing_FC.
                 # Shouldn't be happening in the inference loop.
                 current_turn_message = [
@@ -239,8 +246,12 @@ class BaseHandler:
                 )
 
                 # Process the metadata
-                current_turn_input_token_count.append(model_response_data["input_token"])
-                current_turn_output_token_count.append(model_response_data["output_token"])
+                current_turn_input_token_count.append(
+                    model_response_data["input_token"]
+                )
+                current_turn_output_token_count.append(
+                    model_response_data["output_token"]
+                )
                 current_turn_latency.append(query_latency)
 
                 current_turn_response.append(model_responses)
@@ -319,7 +330,7 @@ class BaseHandler:
                     )
 
                 count += 1
-                # Force quit after too many steps
+                # Force quit after too many steps.
                 if count > MAXIMUM_STEP_LIMIT:
                     force_quit = True
                     current_step_inference_log.append(
@@ -328,7 +339,6 @@ class BaseHandler:
                             "content": f"Model has been forced to quit after {MAXIMUM_STEP_LIMIT} steps.",
                         }
                     )
-
                     break
 
             # Add to the total list
@@ -369,9 +379,9 @@ class BaseHandler:
         # Special handling for the memory category
         # Need to flush the memory to local file at the end of the conversation
         if is_memory_prereq(test_entry_id):
-            assert (
-                len(involved_instances) == 1
-            ), "Memory category should only involve one class."
+            assert len(involved_instances) == 1, (
+                "Memory category should only involve one class."
+            )
             memory_instance: "MemoryAPI" = list(involved_instances.values())[0]
             memory_instance._flush_memory_to_local_file()
 
@@ -424,14 +434,16 @@ class BaseHandler:
             involved_classes,
             self.model_name_underline_replaced,
             test_entry_id,
-            long_context=("long_context" in test_category or "composite" in test_category),
+            long_context=(
+                "long_context" in test_category or "composite" in test_category
+            ),
             is_evaL_run=False,
         )
 
         if is_memory(test_category):
-            assert (
-                len(involved_instances) == 1
-            ), "Memory category should only involve one class."
+            assert len(involved_instances) == 1, (
+                "Memory category should only involve one class."
+            )
 
             memory_instance: "MemoryAPI" = list(involved_instances.values())[0]
             test_entry["question"] = add_memory_instruction_system_prompt(
@@ -444,7 +456,10 @@ class BaseHandler:
         if not exclude_state_log:
             state_log = []
             for class_name, class_instance in involved_instances.items():
-                if class_name in STATELESS_CLASSES or class_name in OMIT_STATE_INFO_CLASSES:
+                if (
+                    class_name in STATELESS_CLASSES
+                    or class_name in OMIT_STATE_INFO_CLASSES
+                ):
                     continue
                 # Avoid modification in future turns
                 class_instance = deepcopy(class_instance)
@@ -469,9 +484,9 @@ class BaseHandler:
             current_turn_message: list[dict]
 
             if str(turn_idx) in holdout_function:
-                assert (
-                    len(current_turn_message) == 0
-                ), "Holdout turn should not have user message."
+                assert len(current_turn_message) == 0, (
+                    "Holdout turn should not have user message."
+                )
                 current_turn_message = [
                     {
                         "role": "user",
@@ -531,8 +546,12 @@ class BaseHandler:
                 )
 
                 # Process the metadata
-                current_turn_input_token_count.append(model_response_data["input_token"])
-                current_turn_output_token_count.append(model_response_data["output_token"])
+                current_turn_input_token_count.append(
+                    model_response_data["input_token"]
+                )
+                current_turn_output_token_count.append(
+                    model_response_data["output_token"]
+                )
                 current_turn_latency.append(query_latency)
 
                 current_turn_response.append(model_responses)
@@ -561,7 +580,9 @@ class BaseHandler:
                         }
                     )
 
-                    model_response_data["model_responses_decoded"] = decoded_model_responses
+                    model_response_data["model_responses_decoded"] = (
+                        decoded_model_responses
+                    )
                     if is_empty_execute_response(decoded_model_responses):
                         print("Empty response from the model. Proceed to next turn.")
                         current_step_inference_log.append(
@@ -660,9 +681,9 @@ class BaseHandler:
         # Special handling for the memory category
         # Need to flush the memory to local file at the end of the conversation
         if is_memory_prereq(test_entry_id):
-            assert (
-                len(involved_instances) == 1
-            ), "Memory category should only involve one class."
+            assert len(involved_instances) == 1, (
+                "Memory category should only involve one class."
+            )
             memory_instance: "MemoryAPI" = list(involved_instances.values())[0]
             memory_instance._flush_memory_to_local_file()
 
@@ -902,7 +923,10 @@ class BaseHandler:
         raise NotImplementedError
 
     def _add_execution_results_FC(
-        self, inference_data: dict, execution_results: list[str], model_response_data: dict
+        self,
+        inference_data: dict,
+        execution_results: list[str],
+        model_response_data: dict,
     ) -> dict:
         """
         Add the execution results to the chat history to prepare for the next turn of query.
@@ -984,7 +1008,10 @@ class BaseHandler:
         raise NotImplementedError
 
     def _add_execution_results_prompting(
-        self, inference_data: dict, execution_results: list[str], model_response_data: dict
+        self,
+        inference_data: dict,
+        execution_results: list[str],
+        model_response_data: dict,
     ) -> dict:
         """
         Add the execution results to the chat history to prepare for the next turn of query.

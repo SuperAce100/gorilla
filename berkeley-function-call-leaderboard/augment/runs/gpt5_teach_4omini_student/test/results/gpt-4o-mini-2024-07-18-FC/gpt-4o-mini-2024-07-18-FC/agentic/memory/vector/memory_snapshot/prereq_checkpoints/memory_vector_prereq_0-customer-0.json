@@ -1,0 +1,23 @@
+{
+    "core_memory": {
+        "next_id": 2,
+        "store": {
+            "0": "User's name is Michael. This is his first interaction with the company.",
+            "1": "User is 35 years old, lives in Seattle, works as a freelance graphic designer, and is interested in high-quality coffee machines that fit his design aesthetic."
+        }
+    },
+    "archival_memory": {
+        "next_id": 9,
+        "store": {
+            "0": "User is looking for details on standard drip coffee makers and espresso machines.",
+            "1": "User is interested in espresso machines with features suitable for non-professional baristas, seeking a caf\u00e9-like experience at home. User prefers sleek, modern, stainless-steel finishes.",
+            "2": "User is curious about pricing for espresso machines and interested in discounts or promotional offers for first-time buyers.",
+            "3": "User is located in Seattle and is concerned about shipping times and conditions, especially due to rainy weather. User is hoping to receive the product before a family gathering later this month.",
+            "4": "User has a friend who recently bought a kitchen appliance from the website and praised the excellent customer support.",
+            "5": "User is a big coffee lover and wants to ensure the coffee machine matches his routine, including brewing frequency, cleaning complexity, and size.",
+            "6": "User's kitchen has a fair amount of appliances on the counter, and he is considering the size of the espresso machine to avoid overcrowding. He wants to know the dimensions of the machine before purchasing.",
+            "7": "User is interested in warranty and quality guarantee information for coffee machines, expressing concern about short warranty periods from other brands.",
+            "8": "User has had issues with drip coffee makers not getting hot enough, leading to microwaving coffee. He wants to know if the coffee machines have adjustable temperature settings or produce reliably hot coffee."
+        }
+    }
+}

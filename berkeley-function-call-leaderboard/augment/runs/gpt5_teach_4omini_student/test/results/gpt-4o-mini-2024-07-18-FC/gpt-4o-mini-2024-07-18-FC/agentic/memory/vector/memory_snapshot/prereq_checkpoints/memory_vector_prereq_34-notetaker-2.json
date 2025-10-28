@@ -1,0 +1,34 @@
+{
+    "core_memory": {
+        "next_id": 6,
+        "store": {
+            "0": "Schedule dentist appointment.",
+            "1": "Stick to gym 3x this week.",
+            "2": "Call mom\u2014it\u2019s been a while.",
+            "3": "Wash dishes tonight before it piles up.",
+            "4": "Take out trash Wednesday morning.",
+            "5": "Wash and vacuum car on Sunday."
+        }
+    },
+    "archival_memory": {
+        "next_id": 16,
+        "store": {
+            "0": "Vitamin D3\u20141000 IU daily.",
+            "1": "Omega-3s\u2014good for joints.",
+            "2": "Iron levels were low last check-up\u2014remember to take supplements.",
+            "3": "Probiotics\u2014help with digestion, take in the morning.",
+            "4": "Separate laundry colors, don\u2019t mix whites.",
+            "5": "Fix leaky sink in the kitchen\u2014YouTube how-to if needed.",
+            "6": "Vacuum living room.",
+            "7": "Mop the kitchen floor\u2014sticky from last night\u2019s spill.",
+            "8": "Check tire pressure.",
+            "9": "Refill windshield wiper fluid.",
+            "10": "Sort through closet\u2014donate old clothes.",
+            "11": "Shred old mail.",
+            "12": "Restock pantry\u2014running low on rice and cereal.",
+            "13": "Tighten loose cabinet handle.",
+            "14": "Replace bathroom lightbulb.",
+            "15": "Patch up minor wall scuffs."
+        }
+    }
+}

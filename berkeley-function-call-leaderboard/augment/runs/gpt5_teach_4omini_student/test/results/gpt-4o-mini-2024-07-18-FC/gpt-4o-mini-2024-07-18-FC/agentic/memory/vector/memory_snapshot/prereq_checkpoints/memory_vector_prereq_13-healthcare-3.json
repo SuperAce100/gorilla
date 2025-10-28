@@ -1,0 +1,37 @@
+{
+    "core_memory": {
+        "next_id": 6,
+        "store": {
+            "0": "User prioritizes sleep, needing seven to eight hours for optimal rest and has improved sleep hygiene.",
+            "1": "User prioritizes skin care as they age, emphasizing hydration and daily sunscreen use.",
+            "2": "User values social connections for mental well-being and stays socially active by meeting friends and participating in a book club.",
+            "3": "User engages in lifelong learning to keep their brain sharp, including doing puzzles, reading, and taking online classes.",
+            "4": "User is learning to manage chronic pain from osteoarthritis as they age, focusing on finding ways to cope with discomfort.",
+            "5": "User embraces aging and values the wisdom that comes with experience."
+        }
+    },
+    "archival_memory": {
+        "next_id": 19,
+        "store": {
+            "0": "User's vitamin D levels came back at 22 ng/mL, which is considered deficient.",
+            "1": "The normal range for vitamin D is 30-50 ng/mL.",
+            "2": "User's doctor put them on a vitamin D supplement of 2,000 IU daily.",
+            "3": "User will get retested in a few months to see if their vitamin D levels improve.",
+            "4": "User's thyroid numbers were stable, with a TSH of 2.1 mIU/L, which is in the normal range(0.5-4.5 mIU/L).",
+            "5": "User has had issues with hypothyroidism in the past and gets their thyroid checked regularly.",
+            "6": "User's T4 levels were good at 1.2 ng/dL, indicating that their current dosage of levothyroxine is working well.",
+            "7": "User's bone density scan showed a slight decline, with a spine T-score of -1.8, indicating osteopenia.",
+            "8": "User's hip T-score was -1.5, which is also in the borderline range.",
+            "9": "User's doctor advised them to keep up with strength training and calcium intake to prevent further bone loss.",
+            "10": "User has started adding more dairy and leafy greens to their diet and takes a calcium supplement with vitamin K2 to help with absorption.",
+            "11": "User's liver and kidney function tests were mostly fine, but their ALT levels were elevated at 42 U/L(normal is under 35 U/L).",
+            "12": "User's doctor thinks the elevated ALT levels might be related to recent medication adjustments.",
+            "13": "User's creatinine levels were at 0.9 mg/dL, which is well within the normal range(0.6-1.2 mg/dL), indicating no concerns with kidney function.",
+            "14": "User's C-reactive protein(CRP) was at 3.2 mg/L, which is slightly elevated(ideal is under 3.0 mg/L), indicating some mild inflammation, likely related to osteoarthritis.",
+            "15": "User's ESR(erythrocyte sedimentation rate) was 18 mm/hr, which is within the normal range(0-20 mm/hr), indicating no major inflammation.",
+            "16": "User feels good about their latest test results but recognizes the need to work on keeping blood sugar in check and increasing vitamin D levels.",
+            "17": "User has learned that tracking their health numbers regularly helps them stay on top of their health.",
+            "18": "User believes in making small, consistent changes to keep feeling their best."
+        }
+    }
+}

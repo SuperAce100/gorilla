@@ -1,0 +1,40 @@
+{
+    "core_memory": {
+        "next_id": 7,
+        "store": {
+            "0": "User is a fourth-year Computer Science major. They are taking higher-level courses this semester, including complex algorithmic concepts, advanced system design, and quantum computing basics.",
+            "1": "User is taking a Distributed Systems course(CS 2631), which involves a lot of reading, group discussions, and a major project simulating a decentralized file storage system. They find the group project challenging due to different coding styles and ideas among team members.",
+            "2": "User is taking an elective in Game Design, which counts toward their Computer Science major. They have always been a gamer and find the course enjoyable. The professor has industry experience, and they are learning about 2D and 3D engines, physics implementation, and user experience design.",
+            "3": "User is taking an Introduction to Quantum Computing class, which they initially found intimidating but now enjoy. The professor focuses on conceptual understanding rather than pure math, although there is significant linear algebra involved.",
+            "4": "User is taking a Capstone Project course, where they are working on a project that uses machine learning to analyze social media sentiment for better emergency response. The project involves reading tweets and posts to identify potential disasters or crises.",
+            "5": "User is taking a humanities elective, Philosophy of Mind, which is their last required non-CS elective. They chose it for its connections to AI, discussing topics like consciousness and the implications for artificial intelligence.",
+            "6": "User's schedule includes Advanced Algorithms and Distributed Systems on Mondays and Wednesdays, with a Capstone meeting after lunch. Tuesdays and Thursdays are lighter with Quantum Computing and Game Design classes. Philosophy of Mind is on Thursday evenings."
+        }
+    },
+    "archival_memory": {
+        "next_id": 21,
+        "store": {
+            "0": "User's schedule this semester is challenging but rewarding as they are finally taking higher-level courses.",
+            "1": "User's professor for Advanced Algorithms is skilled at explaining complex concepts intuitively, often presenting seemingly impossible problems and showing strategies to approximate solutions.",
+            "2": "User's favorite class this semester is Advanced Algorithms, where they enjoy the connection between theory and real-world problem-solving. They find topics like optimizing pathfinding in large networks and handling huge datasets fascinating.",
+            "3": "User's professor for Advanced Algorithms is skilled at explaining complex concepts intuitively, often presenting seemingly impossible problems and showing strategies to approximate solutions.",
+            "4": "User appreciates the real-world aspect of collaboration in the Distributed Systems course, including handling concurrency issues and node failures. They experienced a sense of accomplishment after troubleshooting a bug caused by a misplaced bracket in a config file.",
+            "5": "User recently designed a mini-game based on a labyrinth concept, focusing on balancing the difficulty curve to prevent player frustration. They found the assignment creatively rewarding.",
+            "6": "In the Quantum Computing class, user is modeling basic algorithms like Grover's and Shor's to understand their theoretical advantages over classical methods. They find the material mind-blowing and it has changed their approach to problem-solving.",
+            "7": "User's Capstone Project includes building an interface for city officials or campus security to see real-time alerts. The project integrates skills from database management, API building, front-end interface design, and machine learning.",
+            "8": "User's team is using agile methodologies, with one member acting as the Scrum Master, conducting weekly sprints and daily stand-ups. They find the project challenging but are excited about the potential outcome.",
+            "9": "In the Philosophy of Mind class, user enjoys class discussions and analyzing abstract ideas, which provides a nice change from their coding-heavy courses. They recently wrote a paper on whether strong AI could experience qualia.",
+            "10": "User values the perspective gained from bridging technical knowledge with ethical considerations in AI.",
+            "11": "User keeps Fridays open for assignments, group projects, and labs. They also do undergrad research hours in a lab focusing on data visualization for big scientific datasets.",
+            "12": "User's group for the Distributed Systems project meets at least twice a week and uses Slack or Discord for communication, but coordinating schedules can be challenging.",
+            "13": "User appreciates the opportunity to invest in academic projects without the pressures of a job environment.",
+            "14": "User finds balancing group projects to be the biggest challenge this semester, particularly with the Capstone project consuming around ten hours a week and the Distributed Systems project also requiring significant time.",
+            "15": "User's group for the Distributed Systems project meets at least twice a week and uses Slack or Discord for communication, but coordinating schedules can be challenging.",
+            "16": "User appreciates the opportunity to invest in academic projects without the pressures of a job environment.",
+            "17": "User occasionally pulls late nights for debugging but finds it less daunting than before. They appreciate the skills they've developed over four years, including resourcefulness, collaboration, and critical thinking.",
+            "18": "User feels that their current classes are directly building toward their future career, which is a rewarding experience.",
+            "19": "User is enjoying their semester overall and has gained confidence in problem-solving and time management. They used to dread tougher CS classes but now feel more capable.",
+            "20": "User occasionally pulls late nights for debugging but finds it less daunting than before. They appreciate the skills they've developed over four years, including resourcefulness, collaboration, and critical thinking."
+        }
+    }
+}

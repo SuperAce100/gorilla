@@ -90,18 +90,10 @@ def augment_train(
     embedding_model: str = typer.Option(
         "sentence-transformers/all-MiniLM-L6-v2", help="Embedding model name"
     ),
-    num_threads: Optional[int] = typer.Option(
-        None, help="Number of concurrent examples to run in parallel"
-    ),
 ):
     """Run generation on train split, evaluate, create success pool and FAISS index."""
     load_dotenv(dotenv_path=DOTENV_PATH, verbose=True, override=True)
-    cfg = TrainConfig(
-        tag=tag,
-        model_train=model_train,
-        embedding_model=embedding_model,
-        num_threads=num_threads,
-    )
+    cfg = TrainConfig(tag=tag, model_train=model_train, embedding_model=embedding_model)
     run_train(cfg)
     print("✅ Training run complete (results, scores, success pool, index)")
 
@@ -116,9 +108,6 @@ def augment_test(
     embedding_model: str = typer.Option(
         "sentence-transformers/all-MiniLM-L6-v2", help="Embedding model name"
     ),
-    num_threads: Optional[int] = typer.Option(
-        None, help="Number of concurrent examples to run in parallel"
-    ),
 ):
     """Run augmented generation on the test split and evaluate."""
     load_dotenv(dotenv_path=DOTENV_PATH, verbose=True, override=True)
@@ -129,7 +118,6 @@ def augment_test(
         retrieval_scope=retrieval_scope,
         k=k,
         embedding_model=embedding_model,
-        num_threads=num_threads,
     )
     run_test(cfg)
     print("✅ Augmented test run complete (results, scores)")

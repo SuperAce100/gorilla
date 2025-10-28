@@ -36,7 +36,9 @@ def get_handler(model_name: str) -> BaseHandler:
 def _subset_entries_by_model_ids(
     model_result_entries: list[dict],
     prompt_entries: list[dict],
-    ground_truth_entries: list[dict] = None,  # Irrelevance entries don't have ground truth
+    ground_truth_entries: list[
+        dict
+    ] = None,  # Irrelevance entries don't have ground truth
     allow_missing: bool = False,
 ):
     """
@@ -233,7 +235,9 @@ def _evaluate_single_multi_turn_entry(
                 # Ignore any failed decoding and continue to the next message
                 # We only care about the decoded function call, not the error message or if the model is chatting
                 continue
-        multi_turn_model_result_list_decoded.append(single_turn_model_result_list_decoded)
+        multi_turn_model_result_list_decoded.append(
+            single_turn_model_result_list_decoded
+        )
 
     # Check if the model output the correct function calls
     accuracy_checker_result = multi_turn_checker(
@@ -304,7 +308,9 @@ def _evaluate_single_relevance_entry(
             "decoded_result": decoded_result,
         }
         if "irrelevance" in test_category:
-            temp["error"] = ["Valid syntax. Successfully decode AST when it should not."]
+            temp["error"] = [
+                "Valid syntax. Successfully decode AST when it should not."
+            ]
             temp["error_type"] = "irrelevance_error:decoder_success"
         else:
             temp["error"] = [
@@ -400,9 +406,9 @@ def format_sensitivity_runner(
     test_category,
     score_dir,
 ):
-    assert (
-        len(model_result) == len(prompt) == len(possible_answer)
-    ), f"The length of the model result ({len(model_result)}) does not match the length of the prompt ({len(prompt)}) or possible answer ({len(possible_answer)}). Please check the input files for completeness."
+    assert len(model_result) == len(prompt) == len(possible_answer), (
+        f"The length of the model result ({len(model_result)}) does not match the length of the prompt ({len(prompt)}) or possible answer ({len(possible_answer)}). Please check the input files for completeness."
+    )
 
     # The format sensitivity tests are all single-turn tests, so we use a similar logic to the ast_file_runner to evaluate them.
 
@@ -419,9 +425,9 @@ def format_sensitivity_runner(
         prompt_entry = prompt[i]
         possible_answer_item = possible_answer[i]["ground_truth"]
 
-        assert (
-            ":" in index and len(index.split(":")) == 3
-        ), f"Test entry ID {index} should contain exactly two colons, since they are supposed to be the format sensitivity ids."
+        assert ":" in index and len(index.split(":")) == 3, (
+            f"Test entry ID {index} should contain exactly two colons, since they are supposed to be the format sensitivity ids."
+        )
 
         format_sensitivity_config = index.split(":")[1]
         (
@@ -506,9 +512,9 @@ def agentic_runner(
     test_category,
     score_dir,
 ):
-    assert (
-        len(model_result) == len(prompt) == len(possible_answer)
-    ), f"The length of the model result ({len(model_result)}) does not match the length of the prompt ({len(prompt)}) or possible answer ({len(possible_answer)}). Please check the input files for completeness."
+    assert len(model_result) == len(prompt) == len(possible_answer), (
+        f"The length of the model result ({len(model_result)}) does not match the length of the prompt ({len(prompt)}) or possible answer ({len(possible_answer)}). Please check the input files for completeness."
+    )
 
     result = []
     correct_count = 0
@@ -548,9 +554,9 @@ def multi_turn_runner(
     test_category,
     score_dir,
 ):
-    assert (
-        len(model_result) == len(prompt) == len(possible_answer)
-    ), f"The length of the model result ({len(model_result)}) does not match the length of the prompt ({len(prompt)}) or possible answer ({len(possible_answer)}). Please check the input files for completeness."
+    assert len(model_result) == len(prompt) == len(possible_answer), (
+        f"The length of the model result ({len(model_result)}) does not match the length of the prompt ({len(prompt)}) or possible answer ({len(possible_answer)}). Please check the input files for completeness."
+    )
 
     result = []
     correct_count = 0
@@ -618,9 +624,9 @@ def ast_file_runner(
     model_name,
     score_dir,
 ):
-    assert (
-        len(model_result) == len(prompt) == len(possible_answer)
-    ), f"The length of the model result ({len(model_result)}) does not match the length of the prompt ({len(prompt)}) or possible answer ({len(possible_answer)}). Please check the input files for completeness."
+    assert len(model_result) == len(prompt) == len(possible_answer), (
+        f"The length of the model result ({len(model_result)}) does not match the length of the prompt ({len(prompt)}) or possible answer ({len(possible_answer)}). Please check the input files for completeness."
+    )
 
     if is_java(test_category):
         language = Language.JAVA
@@ -696,13 +702,21 @@ def evaluate_task(
         # Find the corresponding possible answer entries
         possible_answer = load_ground_truth_entry(test_category)
         # Sanity: prompt and ground truth should be 1:1
-        assert len(prompt) == len(
-            possible_answer
-        ), f"Length of ground truth ({len(possible_answer)}) should match prompt entries ({len(prompt)})."
+        assert len(prompt) == len(possible_answer), (
+            f"Length of ground truth ({len(possible_answer)}) should match prompt entries ({len(prompt)})."
+        )
 
         prompt, possible_answer = _subset_entries_by_model_ids(
             model_result, prompt, possible_answer, allow_missing=allow_missing
         )
+
+        # When allowing missing IDs, align the model_result to the filtered
+        # prompt order so downstream runners see equal-length, ordered lists.
+        if allow_missing and prompt:
+            id_to_result = {entry["id"]: entry for entry in model_result}
+            model_result = [
+                id_to_result[e["id"]] for e in prompt if e["id"] in id_to_result
+            ]
 
         if is_format_sensitivity(test_category):
             accuracy, total_count = format_sensitivity_runner(
@@ -758,7 +772,6 @@ def evaluate_task(
 def runner(
     model_names, test_categories, result_dir, score_dir, allow_missing: bool = False
 ):
-
     # A dictionary to store the evaluation scores.
     # Key is model name, value is a dictionary with keys as test category
     # and values as a dictionary with accuracy and total count.
@@ -773,7 +786,6 @@ def runner(
 
     # Traverse each subdirectory
     for subdir in tqdm(subdirs, desc="Number of models evaluated"):
-
         model_name = subdir.relative_to(result_dir).name
         if model_names is not None and model_name not in model_names:
             continue
@@ -903,7 +915,9 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    load_dotenv(dotenv_path=DOTENV_PATH, verbose=True, override=True)  # Load the .env file
+    load_dotenv(
+        dotenv_path=DOTENV_PATH, verbose=True, override=True
+    )  # Load the .env file
     main(
         args.model,
         args.test_category,

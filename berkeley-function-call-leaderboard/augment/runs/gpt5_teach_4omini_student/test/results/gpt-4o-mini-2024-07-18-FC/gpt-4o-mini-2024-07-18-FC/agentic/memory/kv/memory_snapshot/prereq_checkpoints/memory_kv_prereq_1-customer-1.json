@@ -1,0 +1,26 @@
+{
+    "core_memory": {
+        "user_interest_in_coffee_beans": "recommendations for coffee beans",
+        "user_interest_in_coffee_grinders": "recommendations for coffee grinders"
+    },
+    "archival_memory": {
+        "user_shipping_preferences": "concerned about potential delays, prefers to double-check shipping timelines, anxious about package handling",
+        "user_interest_in_expedited_shipping": "considering expedited shipping for an extra fee",
+        "user_payment_preferences": "flexible with payment options, used credit card last time, interested in special financing options for subscriptions, appreciates spreading out payments for pricey kitchen gadgets",
+        "user_investment_in_kitchen_gadgets": "considers kitchen gadgets an investment in daily routine",
+        "user_interest_in_coffee_tools": "digital scale, temperature-controlled kettle, interested in tools that improve brewing results without cluttering kitchen",
+        "user_balance_between_craft_and_design": "appreciates craft and design aspects, prefers moderation in kitchen gadgets",
+        "user_feedback_on_experience": "overall impressed with handling of issues, espresso machine performs well, lattes consistently delicious, interested in improving with the right steam wand",
+        "user_excitement_for_new_products": "looking forward to new products and finalizing second order",
+        "user_readiness_to_complete_purchase": "ready to complete purchase, has shipping details and account login ready",
+        "user_excitement_for_coffee_game": "excited to take coffee game up another notch",
+        "user_age": "35",
+        "user_orders": "First order: coffee grinder bundle(stainless-steel), cleaning tablets, upgraded frothing pitcher; Second order: vacuum-sealed coffee canisters, digital scale(Garmin collaboration).",
+        "user_shipping_concerns": "Michael is particularly concerned about the shipping status of the coffee grinder bundle, as it is a key piece for elevating his espresso game. He is less worried about the canisters and scale, which he can manage without for a few weeks.",
+        "user_order_concerns": "Michael is concerned about the possibility of his coffee grinder bundle being split into separate shipments, which could lead to confusion if part of the order arrives separately.",
+        "user_travel_plans": "Michael is heading out of town next weekend for a small freelance gig in Portland and is concerned about package deliveries occurring while he is away. He prefers to have his coffee equipment brought inside ASAP to avoid potential damage.",
+        "user_coffee_enthusiasm": "Michael is excited about adding new coffee items to his station and jokes about turning into a full-blown coffee shop. He aims to set everything up and test it before hosting another weekend gathering, as his friends expect premium brews.",
+        "user_billing_shipping_concerns": "Michael is concerned about potential issues with billing or shipping address for his second order, as he has experienced a mix-up with Apple Pay in the past.",
+        "user_appreciation_feedback": "appreciates responsive and detailed customer support, asks many questions"
+    }
+}
