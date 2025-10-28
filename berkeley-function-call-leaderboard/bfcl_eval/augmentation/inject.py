@@ -23,8 +23,8 @@ def inject_few_shots(entry: dict, examples: List[Tuple[str, str]]) -> dict:
         user_pos = i + 1
 
     injected: List[dict] = []
-    for idx, (u, a) in enumerate(examples, start=1):
-        injected.append({"role": "user", "content": f"[Example {idx}]\n{u}"})
+    for u, a in examples:
+        injected.append({"role": "user", "content": u})
         injected.append({"role": "assistant", "content": a})
 
     # splice in

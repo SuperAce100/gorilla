@@ -143,7 +143,7 @@ def run_train(cfg: TrainConfig) -> None:
         )
         entries = [e for e in entries if e["id"] in success_ids_all]
         for e in entries:
-            text, subc = serialize_for_embedding(e)
+            text, subc = serialize_for_embedding(e, model_result_dir=train_result_dir)
             texts.append(text)
             keys.append({"id": e["id"], "subcategory": subc})
 

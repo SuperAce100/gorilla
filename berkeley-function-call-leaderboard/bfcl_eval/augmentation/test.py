@@ -19,7 +19,11 @@ from bfcl_eval.utils import load_dataset_entry
 
 from .index import SimpleFaissIndex, encode_texts, scope_filter_keys
 from .inject import inject_few_shots
-from .serialize import serialize_for_embedding
+from .serialize import (
+    serialize_for_embedding,
+    build_first_turn_observation,
+    get_first_user_message,
+)
 
 
 AGENTIC_SUBCATEGORIES = [
@@ -60,10 +64,11 @@ def _gather_examples_for_entry(
     entry: dict,
     k: int,
     scope: str,
-    index: SimpleFaissIndex,
+    index: SimpleFaissIndex | None,
     keys: List[dict],
     subcategories: List[str],
     run_dir: Path,
+    model_result_dir: Path,
 ) -> List[Tuple[str, str]]:
     # Load pool map id -> answer_text
     pool_path = run_dir / "train" / "success_pool.jsonl"
@@ -73,17 +78,31 @@ def _gather_examples_for_entry(
             rec = json.loads(line)
             id_to_ans[rec["id"]] = rec.get("answer_text", "")
 
-    # Prepare query
-    query_text, subcat = serialize_for_embedding(entry)
+    # Prepare query using fully materialized first-turn observation
+    _, query_text = build_first_turn_observation(entry, model_result_dir)
+    subcat = entry["id"].rsplit("_", 1)[0]
     allowed_indices = scope_filter_keys(keys, subcat, scope, k)
 
-    # Encode and search
-    q = encode_texts([query_text], index.embedding_model)
-    D, I = index.search(q, min(k, len(keys)))
-    candidate_rows = [i for i in I[0] if i in allowed_indices]
+    candidate_rows: List[int] = []
+    if index is not None and keys:
+        # Encode and search
+        q = encode_texts([query_text], index.embedding_model)
+        D, I = index.search(q, min(k, len(keys)))
+        candidate_rows = [i for i in I[0] if i in allowed_indices]
 
     examples: List[Tuple[str, str]] = []
     if not candidate_rows:
+        # Fallback: if no candidates in index, pick any successes from same subcategory
+        fallback_ids = [
+            rid
+            for rid in id_to_ans.keys()
+            if rid.rsplit("_", 1)[0] == subcat and rid != entry["id"]
+        ]
+        for rid in fallback_ids[:k]:
+            user_text = get_user_text_by_id(rid)
+            ans_text = id_to_ans.get(rid, "")
+            if user_text and ans_text:
+                examples.append((user_text, ans_text))
         return examples
 
     # Map from id -> user text for examples requires re-loading original entries
@@ -96,12 +115,7 @@ def _gather_examples_for_entry(
             entries = load_dataset_entry(
                 subc, include_prereq=False, include_language_specific_hint=True
             )
-            cache[subc] = {
-                e["id"]: serialize_for_embedding(e)[0]
-                .split("\n", 1)[-1]
-                .replace("User: ", "")
-                for e in entries
-            }
+            cache[subc] = {e["id"]: get_first_user_message(e) for e in entries}
         return cache[subc].get(target_id, "")
 
     seen = set()
@@ -167,9 +181,19 @@ def run_test(cfg: TestConfig) -> None:
                     keys=keys,
                     subcategories=subcategories,
                     run_dir=run_dir,
+                    model_result_dir=test_result_dir / cfg.model_eval.replace("/", "_"),
                 )
             else:
-                exs = []
+                exs = _gather_examples_for_entry(
+                    entry=e,
+                    k=cfg.k,
+                    scope=cfg.retrieval_scope,
+                    index=None,
+                    keys=keys,
+                    subcategories=subcategories,
+                    run_dir=run_dir,
+                    model_result_dir=test_result_dir / cfg.model_eval.replace("/", "_"),
+                )
             e_aug = inject_few_shots(entry=e, examples=exs)
             augmented_entries.append(e_aug)
 
